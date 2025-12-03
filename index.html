@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Personal academic-style website of Gulusan Erdoğan-Ozgul – machine learning and data science professional focusing on data-centric AI, representation learning, and decision systems." />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f5f5f4;
+      --card: #ffffff;
+      --accent: #1f3b6b;          /* deep academic navy */
+      --accent-soft: rgba(31, 59, 107, 0.08);
+      --muted: #4b5563;
+      --text: #111827;
+      --border: #d1d5db;
+      --link: #1d4ed8;
+      --chip-bg: #eef2ff;
+      --chip-border: #c7d2fe;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --radius-pill: 999px;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, #e5edf7 0, #f5f5f4 45%, #e5e7eb 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px 16px 64px;
+    }
+
+    /* HEADER / NAV */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(to bottom,
+                  rgba(245, 245, 244, 0.98),
+                  rgba(245, 245, 244, 0.92),
+                  transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(209, 213, 219, 0.8);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 16px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(31, 59, 107, 0.4);
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+      background: #e5e7eb;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      color: var(--muted);
+      background: transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: rgba(148, 163, 184, 0.8);
+      color: #111827;
+      background: #e6edfb;
+    }
+
+    .pill-primary {
+      border-color: var(--accent);
+      color: #ffffff;
+      background: var(--accent);
+      font-weight: 500;
+    }
+
+    .pill-primary:hover {
+      background: #152b4a;
+    }
+
+    main {
+      margin-top: 22px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 8px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 34px);
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-top: 14px;
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 26px;
+      align-items: center;
+      padding: 24px 20px;
+      margin-bottom: 36px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at top left, rgba(31, 59, 107, 0.12), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.10), transparent 60%),
+        var(--card);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(209, 213, 219, 0.95);
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: #edf2ff;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #16a34a;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero-buttons {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      background: #f3f4ff;
+      color: #111827;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #e6edfb;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: transparent;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: #152b4a;
+    }
+
+    .hero-aside {
+      border-radius: var(--radius-lg);
+      background: #f9fafb;
+      border: 1px solid rgba(209, 213, 219, 0.95);
+      padding: 14px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(31, 59, 107, 0.45);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+      background: #e5e7eb;
+    }
+
+    .hero-list {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 0;
+      width: 100%;
+    }
+
+    .hero-list li {
+      margin-bottom: 6px;
+      display: flex;
+      gap: 6px;
+      color: var(--muted);
+    }
+
+    .hero-list li::before {
+      content: "•";
+      color: var(--accent);
+    }
+
+    .hero-aside-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* SECTIONS */
+
+    .section-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 4px 0 8px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 6px 0 4px;
+    }
+
+    .chip {
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--chip-border);
+      background: var(--chip-bg);
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .chip-strong {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: #1f3b6b;
+    }
+
+    .project-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .project-item {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+    }
+
+    .project-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .project-note {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* READING */
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 18px;
+    }
+
+    .reading-category {
+      margin-bottom: 12px;
+    }
+
+    .reading-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .reading-books {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .reading-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .reading-image {
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .reading-image img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.14);
+      border: 1px solid rgba(209, 213, 219, 0.95);
+      background: #f9fafb;
+    }
+
+    /* CV & CONTACT */
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .contact-links a {
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: #f3f4ff;
+      color: var(--muted);
+    }
+
+    .contact-links a:hover {
+      border-color: rgba(148, 163, 184, 0.9);
+      background: #e6edfb;
+      color: #111827;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(209, 213, 219, 0.9);
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 780px) {
+      .hero,
+      .two-column,
+      .reading-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        justify-content: flex-end;
+      }
+      .hero {
+        padding: 18px 14px;
+      }
+      .section-card {
+        padding: 15px 14px 13px;
+      }
+      .page {
+        padding-inline: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <!-- Your small avatar: file must be named me.jpg -->
+      <img src="me.jpg" alt="Photo of Gulusan Erdoğan-Ozgul" class="brand-avatar" />
+      <div class="brand-text">
+        <div class="brand-name">Gulusan Erdoğan-Ozgul</div>
+        <div class="brand-tag">Machine Learning • Data Science • Decision Systems</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Interests</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#reading">Reading</a>
+      <a href="#cv" class="pill-primary">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div>
+        <div class="hero-highlight">
+          <span class="dot"></span>
+          <span>Machine Learning &amp; Data Science • U.S. Citizen</span>
+        </div>
+        <h1>Machine Learning, Data-Centric AI & System-Level Behavior</h1>
+        <p class="hero-sub">
+          I work on practical machine learning and data science problems with a strong
+          interest in how models behave inside complex real-world decision systems.
+          My focus includes representation learning, robustness, and model evaluation
+          under realistic data and organizational constraints.
+        </p>
+        <div class="hero-buttons">
+          <a href="#research" class="btn btn-primary">Explore Interests</a>
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#reading" class="btn">Reading &amp; Influences</a>
+        </div>
+      </div>
+
+      <aside class="hero-aside">
+        <!-- Larger portrait in hero -->
+        <img src="me.jpg" alt="Photo of Gulusan Erdoğan-Ozgul" class="hero-photo" />
+        <div class="hero-aside-title">Current focus</div>
+        <ul class="hero-list">
+          <li>Representation learning and dimensionality reduction (PCA, SVD, t-SNE).</li>
+          <li>Data-centric ML, diagnostics, and evaluation beyond single metrics.</li>
+          <li>Customer behavior modeling and sentiment analysis with modern NLP.</li>
+          <li>Decision systems and how ML interacts with organizational processes.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-card">
+        <h2>About</h2>
+        <p>
+          I am a machine learning and data science professional with experience
+          building models and analytics for complex operational and customer-facing
+          settings. My work includes customer behavior modeling, sentiment analysis
+          using transformer-based NLP models, time series forecasting, dimensionality
+          reduction (PCA, t-SNE), and quantitative segmentation.
+        </p>
+        <p>
+          I originally trained in business and management and hold an MBA. My master’s
+          research examined structural barriers to career advancement for women managers
+          through survey-based empirical analysis. That work introduced me to
+          system-level thinking, feedback loops, and how metrics and structures
+          shape outcomes—ideas that continue to influence how I approach machine
+          learning and data systems today.
+        </p>
+        <p>
+          In recent years I have completed applied data science and cloud training
+          through MIT Professional Education and Great Learning, and I am building a
+          portfolio that bridges hands-on ML work with broader questions about
+          robustness, governance, and decision impact.
+        </p>
+
+        <div class="two-column" style="margin-top:12px;">
+          <div>
+            <h3>Education</h3>
+            <p class="section-subtitle">Degrees & formal programs</p>
+            <ul>
+              <li>
+                <strong>MIT Professional Education – Applied Data Science Program</strong> (2022)<br />
+                Supervised / unsupervised learning, SVD, PCA, optimization, probabilistic modeling.
+              </li>
+              <li>
+                <strong>MBA, Northeastern University</strong><br />
+                Concentrations in Quantitative Methods, Investments, and Corporate Finance.
+              </li>
+              <li>
+                <strong>Master’s, Business Administration, Marmara University</strong><br />
+                Empirical thesis on obstacles to career advancement for women managers in the textile sector.
+              </li>
+              <li>
+                <strong>B.A., Business Administration, Marmara University</strong>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Certifications & Additional Training</h3>
+            <p class="section-subtitle">Selected credentials</p>
+            <ul>
+              <li><strong>Advanced Foundation Models & LLM Architecture</strong> — Great Learning (in progress)</li>
+              <li><strong>Applied Data Science</strong> — MIT Professional Education (2022)</li>
+              <li><strong>Data Science on Cloud with AWS</strong> — Great Learning (2023)</li>
+              <li><strong>SQL & Database Certification</strong> — Great Learning (2022)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="research">
+      <div class="section-card">
+        <h2>Areas of Interest</h2>
+        <p class="section-subtitle">
+          I am particularly interested in how data, representations, and system
+          design choices shape model behavior and decision impact.
+        </p>
+
+        <div class="two-column">
+          <div>
+            <h3>Machine Learning & Representation</h3>
+            <p>
+              I focus on how feature representations, architecture choices, and data
+              distributions affect generalization and robustness.
+            </p>
+            <div class="chip-row">
+              <span class="chip chip-strong">Supervised & unsupervised learning</span>
+              <span class="chip">Clustering & segmentation</span>
+              <span class="chip">Dimensionality reduction (PCA, SVD, t-SNE)</span>
+              <span class="chip">Representation learning</span>
+              <span class="chip">Model diagnostics & calibration</span>
+              <span class="chip">Time series modeling</span>
+              <span class="chip">Transformer-based NLP & sentiment</span>
+            </div>
+          </div>
+          <div>
+            <h3>Decision Systems & Governance</h3>
+            <p>
+              Beyond individual models, I am interested in how ML systems sit inside
+              larger sociotechnical workflows, especially in high-stakes or
+              resource-constrained environments.
+            </p>
+            <div class="chip-row">
+              <span class="chip chip-strong">Decision systems & metrics</span>
+              <span class="chip">Information flow & feedback loops</span>
+              <span class="chip">Data quality & structural propagation</span>
+              <span class="chip">Robustness under real constraints</span>
+              <span class="chip">Organizational adoption of ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-card">
+        <h2>Selected Projects</h2>
+        <p class="section-subtitle">
+          Examples illustrating my experience with representation learning,
+          evaluation, and applied ML in realistic settings.
+        </p>
+
+        <div class="two-column">
+          <div>
+            <h3>Representation & Modeling</h3>
+            <ul class="project-list">
+              <li class="project-item">
+                <div class="project-title">SVD-Based Recommendation Systems</div>
+                <div class="project-meta">Python • Surprise Library • SVD • Collaborative Filtering</div>
+                <p>
+                  Implemented SVD-based collaborative filtering and rank-based recommenders
+                  on user–item interaction data. Handled sparsity, tuned hyperparameters,
+                  and evaluated performance using precision@k, recall@k, and RMSE.
+                </p>
+                <div class="project-note">
+                  Helped build intuition about how different representations and data
+                  regimes influence model behavior.
+                </div>
+              </li>
+              <li class="project-item">
+                <div class="project-title">CNN vs. ANN for Digit Recognition</div>
+                <div class="project-meta">TensorFlow • CNN • ANN • MNIST</div>
+                <p>
+                  Built and compared convolutional and fully connected networks for
+                  digit classification, analyzing generalization and robustness under
+                  different training regimes and architecture depths.
+                </p>
+              </li>
+              <li class="project-item">
+                <div class="project-title">Dimensionality Reduction & Latent Structure</div>
+                <div class="project-meta">PCA • t-SNE • clustering • visualization</div>
+                <p>
+                  Applied PCA and t-SNE to high-dimensional data, interpreting eigenstructure,
+                  variance explained, and cluster separation via silhouette scores and
+                  visual inspection.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>NLP, Imbalanced Data & Pipelines</h3>
+            <ul class="project-list">
+              <li class="project-item">
+                <div class="project-title">Sentiment Analysis with Transformer Models</div>
+                <div class="project-meta">Hugging Face Transformers • NLP • Sentiment</div>
+                <p>
+                  Built sentiment classifiers on customer text using transformer-based
+                  models. Focused on preprocessing, fine-tuning, and evaluation using
+                  accuracy, F1, and confusion matrices with targeted error analysis.
+                </p>
+              </li>
+              <li class="project-item">
+                <div class="project-title">Predictive Modeling Under Class Imbalance</div>
+                <div class="project-meta">Python • Imbalanced data • ROC-AUC • F1</div>
+                <p>
+                  Developed models for imbalanced prediction problems (e.g., approval risk,
+                  cancellation risk) using resampling strategies and threshold tuning.
+                  Evaluated performance via ROC-AUC, precision–recall, and F1 scores.
+                </p>
+              </li>
+              <li class="project-item">
+                <div class="project-title">End-to-End Workflows in Azure ML</div>
+                <div class="project-meta">Azure ML • Experiment tracking • MLOps</div>
+                <p>
+                  Deployed ML workflows with reproducible experiments, configuration
+                  management, and integration into existing analytics environments.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="section-card">
+        <h2>Publications & Academic Work</h2>
+        <h3>Master’s Thesis</h3>
+        <ul>
+          <li>
+            <strong>Erdogan-Ozgul, G.</strong> (2002).
+            <em>Obstacles to Career Advancement for Women Managers:
+              A Social Responsibility Perspective in Business Management
+              (A Survey in the Textile Sector).</em><br />
+            Master’s Thesis, Marmara University (in Turkish). Listed in the YÖK National Thesis Center.
+          </li>
+        </ul>
+        <p>
+          This empirical work used survey data, hypothesis testing, correlation analysis,
+          and organizational behavior frameworks to examine structural and cultural
+          barriers to women’s advancement. It sparked my long-term interest in systems,
+          metrics, and institutional decision-making.
+        </p>
+      </div>
+    </section>
+
+    <!-- READING -->
+    <section id="reading">
+      <div class="section-card">
+        <h2>Reading & Intellectual Influences</h2>
+        <p>
+          My reading spans systems thinking, machine learning, AI governance, and the
+          relationships between technology, institutions, and society. I’m especially
+          drawn to books that connect technical ideas with structural and historical
+          perspective.
+        </p>
+
+        <!-- Books photo: file must be named books.jpg -->
+        <div class="reading-image">
+          <img src="books.jpg" alt="Books on AI, systems, data science, and algorithms" />
+        </div>
+
+        <div class="reading-grid" style="margin-top:14px;">
+          <div>
+            <div class="reading-category">
+              <div class="reading-title">Systems & Complex Environments</div>
+              <div class="reading-books">
+                <em>Thinking in Systems</em> — Donella Meadows<br />
+                <em>Power and Progress</em> — Daron Acemoglu &amp; Simon Johnson
+              </div>
+              <div class="reading-note">
+                Influences how I think about feedback loops, structural constraints,
+                and unintended consequences in ML systems.
+              </div>
+            </div>
+
+            <div class="reading-category">
+              <div class="reading-title">AI Governance & Sociotechnical Perspectives</div>
+              <div class="reading-books">
+                <em>AI Snake Oil</em> — Arvind Narayanan &amp; Sayash Kapoor<br />
+                <em>Empire of AI</em> — Karen Hao<br />
+                <em>Intentional Integrity</em> — Robert Chesnut
+              </div>
+              <div class="reading-note">
+                Encourages a critical view of incentives, institutions, and the
+                deployment contexts around AI systems.
+              </div>
+            </div>
+
+            <div class="reading-category">
+              <div class="reading-title">Learning, Algorithms & Cognition</div>
+              <div class="reading-books">
+                <em>Algorithms to Live By</em> — Brian Christian &amp; Tom Griffiths<br />
+                <em>The Language Game</em> — Morten H. Christiansen &amp; Nick Chater<br />
+                <em>Why Machines Learn</em> — Anil Ananthaswamy<br />
+                <em>The Myth of Artificial Intelligence</em> — Erik J. Larson
+              </div>
+              <div class="reading-note">
+                Shapes my interest in learning processes, representations, and
+                comparisons between human and machine reasoning.
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="reading-category">
+              <div class="reading-title">Technology, Data & Future Systems</div>
+              <div class="reading-books">
+                <em>Nexus</em> — Yuval Noah Harari<br />
+                <em>The Sound of the Future</em> — Tobias Dengel<br />
+                <em>Big Data: Understanding How Data Powers Big Business</em> — Wiley
+              </div>
+              <div class="reading-note">
+                Connects large-scale data and computation with economic and institutional change.
+              </div>
+            </div>
+
+            <div class="reading-category">
+              <div class="reading-title">Computing & Deep Learning Foundations</div>
+              <div class="reading-books">
+                <em>Coders</em> — Clive Thompson<br />
+                <em>Python ile Derin Öğrenme</em> — François Chollet
+              </div>
+              <div class="reading-note">
+                Reinforces the foundations underpinning modern ML systems and deep learning practice.
+              </div>
+            </div>
+
+            <div class="reading-category">
+              <div class="reading-title">Communication & Leadership</div>
+              <div class="reading-books">
+                <em>Speak, Memorably</em> — Bill McGowan
+              </div>
+              <div class="reading-note">
+                Influences how I think about communicating technical ideas and framing
+                ML-driven decisions for diverse audiences.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <div class="section-card">
+        <h2>CV</h2>
+        <p>
+          You can download my current CV here. The document summarizes my technical
+          work, education, and experience with machine learning, analytics, and
+          decision systems.
+        </p>
+        <div class="hero-buttons">
+          <!-- Put your actual PDF files with these names in the same folder, or change the hrefs -->
+          <a href="GulusanErdogan-Ozgul_CV.pdf" class="btn btn-primary">Download CV (PDF)</a>
+          <a href="GulusanErdogan-Ozgul_OnePage.pdf" class="btn">Download 1-Page Overview</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-card">
+        <h2>Contact</h2>
+        <p>
+          I welcome conversations related to machine learning, data-centric AI,
+          analytics for decision systems, and interdisciplinary collaborations.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:e.gulusan@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65"
+             target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/gulusan2021"
+             target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p style="margin-top:10px;font-size:12px;">
+          Based in the Boston metropolitan area, USA • U.S. Citizen
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Gulusan Erdoğan-Ozgul. All rights reserved.
+  </footer>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
