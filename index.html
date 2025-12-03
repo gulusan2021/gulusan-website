@@ -13,19 +13,20 @@
 
   <style>
     :root {
-      --bg: #f5f5f4;
+      /* MIT/CSAIL style: white, light gray, navy, minimal */
+      --bg: #ffffff;
       --card: #ffffff;
-      --accent: #1f3b6b;          /* deep academic navy */
-      --accent-soft: rgba(31, 59, 107, 0.08);
+      --accent: #0a4b90;          /* MIT-ish navy */
+      --accent-soft: rgba(10, 75, 144, 0.06);
       --muted: #4b5563;
       --text: #111827;
-      --border: #d1d5db;
-      --link: #1d4ed8;
+      --border: #e5e7eb;
+      --link: #0a4b90;
       --chip-bg: #eef2ff;
       --chip-border: #c7d2fe;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
-      --radius-lg: 18px;
-      --radius-xl: 26px;
+      --shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.08);
+      --radius-lg: 14px;
+      --radius-xl: 22px;
       --radius-pill: 999px;
       --max-width: 980px;
     }
@@ -37,8 +38,7 @@
     body {
       margin: 0;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, #e5edf7 0, #f5f5f4 45%, #e5e7eb 100%);
+      background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
     }
@@ -64,12 +64,9 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: linear-gradient(to bottom,
-                  rgba(245, 245, 244, 0.98),
-                  rgba(245, 245, 244, 0.92),
-                  transparent);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(209, 213, 219, 0.8);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
     }
 
     .nav-inner {
@@ -93,8 +90,8 @@
       height: 40px;
       border-radius: 999px;
       object-fit: cover;
-      border: 2px solid rgba(31, 59, 107, 0.4);
-      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.18);
       background: #e5e7eb;
     }
 
@@ -106,7 +103,7 @@
     .brand-name {
       font-size: 15px;
       font-weight: 600;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
     .brand-tag {
@@ -117,12 +114,12 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       font-size: 13px;
     }
 
     .nav-links a {
-      padding: 6px 12px;
+      padding: 5px 11px;
       border-radius: var(--radius-pill);
       border: 1px solid transparent;
       color: var(--muted);
@@ -130,9 +127,9 @@
     }
 
     .nav-links a:hover {
-      border-color: rgba(148, 163, 184, 0.8);
+      border-color: rgba(209, 213, 219, 0.9);
       color: #111827;
-      background: #e6edfb;
+      background: #f3f4f6;
     }
 
     .pill-primary {
@@ -143,7 +140,7 @@
     }
 
     .pill-primary:hover {
-      background: #152b4a;
+      background: #083867;
     }
 
     main {
@@ -151,7 +148,7 @@
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 34px;
     }
 
     h1, h2, h3 {
@@ -160,22 +157,22 @@
     }
 
     h1 {
-      font-size: clamp(28px, 4vw, 34px);
+      font-size: clamp(26px, 3.6vw, 32px);
       letter-spacing: 0.01em;
     }
 
     h2 {
-      font-size: 22px;
-      margin-bottom: 16px;
+      font-size: 21px;
+      margin-bottom: 14px;
     }
 
     h3 {
-      font-size: 17px;
-      margin-top: 14px;
+      font-size: 16px;
+      margin-top: 12px;
     }
 
     p {
-      margin: 0 0 10px;
+      margin: 0 0 9px;
       font-size: 14px;
       line-height: 1.6;
       color: var(--muted);
@@ -186,36 +183,33 @@
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 26px;
+      gap: 22px;
       align-items: center;
-      padding: 24px 20px;
-      margin-bottom: 36px;
+      padding: 20px 18px;
+      margin-bottom: 30px;
       border-radius: var(--radius-xl);
-      background:
-        radial-gradient(circle at top left, rgba(31, 59, 107, 0.12), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.10), transparent 60%),
-        var(--card);
+      background: var(--card);
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(209, 213, 219, 0.95);
+      border: 1px solid var(--border);
     }
 
     .hero-sub {
       font-size: 13px;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-highlight {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px 10px;
+      padding: 4px 9px;
       border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: #edf2ff;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      background: #f9fafb;
       font-size: 11px;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-highlight span.dot {
@@ -223,24 +217,23 @@
       height: 8px;
       border-radius: 50%;
       background: #16a34a;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
     }
 
     .hero-buttons {
-      margin-top: 16px;
+      margin-top: 14px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 8px 14px;
+      padding: 7px 13px;
       border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.9);
-      background: #f3f4ff;
+      border: 1px solid rgba(209, 213, 219, 1);
+      background: #f9fafb;
       color: #111827;
       font-size: 13px;
       text-decoration: none;
@@ -248,7 +241,7 @@
     }
 
     .btn:hover {
-      background: #e6edfb;
+      background: #f3f4f6;
     }
 
     .btn-primary {
@@ -259,40 +252,40 @@
     }
 
     .btn-primary:hover {
-      background: #152b4a;
+      background: #083867;
     }
 
     .hero-aside {
       border-radius: var(--radius-lg);
       background: #f9fafb;
-      border: 1px solid rgba(209, 213, 219, 0.95);
-      padding: 14px;
+      border: 1px solid var(--border);
+      padding: 12px;
       font-size: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .hero-photo {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       border-radius: 999px;
       object-fit: cover;
-      border: 2px solid rgba(31, 59, 107, 0.45);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
       background: #e5e7eb;
     }
 
     .hero-list {
       list-style: none;
       padding: 0;
-      margin: 6px 0 0;
+      margin: 4px 0 0;
       width: 100%;
     }
 
     .hero-list li {
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       display: flex;
       gap: 6px;
       color: var(--muted);
@@ -314,21 +307,21 @@
     .section-card {
       background: var(--card);
       border-radius: var(--radius-lg);
-      padding: 18px 18px 16px;
+      padding: 16px 16px 14px;
       border: 1px solid var(--border);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
     }
 
     .two-column {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 20px;
+      gap: 18px;
     }
 
     .section-subtitle {
       font-size: 13px;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     ul {
@@ -337,7 +330,7 @@
     }
 
     li {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       font-size: 13px;
       color: var(--muted);
       line-height: 1.5;
@@ -346,12 +339,12 @@
     .chip-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin: 6px 0 4px;
+      gap: 6px;
+      margin: 5px 0 4px;
     }
 
     .chip {
-      padding: 3px 9px;
+      padding: 2px 8px;
       border-radius: var(--radius-pill);
       border: 1px solid var(--chip-border);
       background: var(--chip-bg);
@@ -363,7 +356,7 @@
     .chip-strong {
       border-color: var(--accent);
       background: var(--accent-soft);
-      color: #1f3b6b;
+      color: #0a4b90;
     }
 
     .project-list {
@@ -373,9 +366,9 @@
     }
 
     .project-item {
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(209, 213, 219, 0.9);
     }
 
     .project-item:last-child {
@@ -386,13 +379,13 @@
     .project-title {
       font-size: 14px;
       font-weight: 600;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .project-meta {
       font-size: 11px;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .project-note {
@@ -406,17 +399,17 @@
     .reading-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-      gap: 18px;
+      gap: 16px;
     }
 
     .reading-category {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .reading-title {
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .reading-books {
@@ -431,7 +424,7 @@
     }
 
     .reading-image {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-align: center;
     }
 
@@ -439,8 +432,8 @@
       max-width: 420px;
       width: 100%;
       border-radius: var(--radius-lg);
-      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.14);
-      border: 1px solid rgba(209, 213, 219, 0.95);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
+      border: 1px solid var(--border);
       background: #f9fafb;
     }
 
@@ -449,29 +442,29 @@
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       font-size: 13px;
       margin-top: 6px;
     }
 
     .contact-links a {
-      padding: 5px 10px;
+      padding: 4px 10px;
       border-radius: var(--radius-pill);
       border: 1px solid var(--border);
-      background: #f3f4ff;
+      background: #f9fafb;
       color: var(--muted);
     }
 
     .contact-links a:hover {
-      border-color: rgba(148, 163, 184, 0.9);
-      background: #e6edfb;
+      border-color: rgba(209, 213, 219, 0.9);
+      background: #f3f4f6;
       color: #111827;
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(209, 213, 219, 0.9);
+      margin-top: 32px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(229, 231, 235, 0.9);
       font-size: 11px;
       color: var(--muted);
       text-align: center;
@@ -492,13 +485,13 @@
         justify-content: flex-end;
       }
       .hero {
-        padding: 18px 14px;
+        padding: 16px 12px;
       }
       .section-card {
-        padding: 15px 14px 13px;
+        padding: 14px 12px 12px;
       }
       .page {
-        padding-inline: 14px;
+        padding-inline: 12px;
       }
     }
   </style>
@@ -588,7 +581,7 @@
           robustness, governance, and decision impact.
         </p>
 
-        <div class="two-column" style="margin-top:12px;">
+        <div class="two-column" style="margin-top:10px;">
           <div>
             <h3>Education</h3>
             <p class="section-subtitle">Degrees & formal programs</p>
@@ -790,7 +783,7 @@
           <img src="books.jpg" alt="Books on AI, systems, data science, and algorithms" />
         </div>
 
-        <div class="reading-grid" style="margin-top:14px;">
+        <div class="reading-grid" style="margin-top:12px;">
           <div>
             <div class="reading-category">
               <div class="reading-title">Systems & Complex Environments</div>
@@ -903,7 +896,7 @@
           <a href="https://github.com/gulusan2021"
              target="_blank" rel="noopener">GitHub</a>
         </div>
-        <p style="margin-top:10px;font-size:12px;">
+        <p style="margin-top:8px;font-size:12px;">
           Based in the Boston metropolitan area, USA • U.S. Citizen
         </p>
       </div>
