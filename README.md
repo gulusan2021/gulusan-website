@@ -1,6 +1,7 @@
 # Gulusan Erdogan-Ozgul — Personal Academic Website
 
-This repository contains the source code for my personal academic website, built to support my PhD applications and showcase my work in Machine Learning, Data Science, and Sociotechnical Decision Systems.
+Source code for my personal academic website, showcasing my work in machine learning, data science, and sociotechnical decision systems.
+
 
 🌐 **Live Website:**  
 https://gulusan2021.github.io/gulusan-website/
