@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
-  <meta name="description" content="Machine Learning, Data Science, Responsible AI, Decision Systems — Academic profile of Gulusan Erdogan-Ozgul.">
-  <meta name="keywords" content="Machine Learning, Data Science, Responsible AI, PhD Candidate, Decision Systems, Representation Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Machine Learning, Data Science, Decision Systems — Academic profile of Gulusan Erdogan-Ozgul.">
+  <meta name="keywords" content="Machine Learning, Data Science, Responsible AI, PhD, Decision Systems, Representation Learning, Robustness">
   <meta name="author" content="Gulusan Erdogan-Ozgul">
 
   <title>Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems</title>
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
+      /* Minimal academic palette */
       --bg: #ffffff;
       --card: #ffffff;
       --accent: #0a4b90;
@@ -43,7 +44,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--link); text-decoration: none; transition: all 0.2s ease; }
+    a {
+      color: var(--link);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
     a:hover { text-decoration: underline; }
 
     .page {
@@ -72,7 +77,11 @@
       gap: 16px;
     }
 
-    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
     .brand-avatar {
       width: 38px;
@@ -113,18 +122,10 @@
       transform: translateY(-1px);
     }
 
-    .nav-links a.active-link {
-      border-color: rgba(10, 75, 144, 0.35);
-      background: rgba(10, 75, 144, 0.06);
-      color: #0a4b90;
-      text-decoration: none;
-    }
-
     main { margin-top: 22px; }
 
     section { margin-bottom: 34px; }
 
-    /* Section dividers (only visible when section is active) */
     section:not(:last-of-type)::after {
       content: "";
       display: block;
@@ -186,7 +187,10 @@
       animation: pulse 2s ease-in-out infinite;
     }
 
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
 
     .hero-buttons {
       margin-top: 14px;
@@ -248,13 +252,13 @@
       background: #e5e7eb;
     }
 
+    .hero-aside-title { font-size: 13px; font-weight: 600; margin-top: 2px; }
+
     .hero-list { list-style: none; padding: 0; margin: 4px 0 0; width: 100%; }
     .hero-list li { margin-bottom: 5px; display: flex; gap: 6px; color: var(--muted); }
     .hero-list li::before { content: "•"; color: var(--accent); }
 
-    .hero-aside-title { font-size: 13px; font-weight: 600; margin-top: 2px; }
-
-    /* SECTION CARD */
+    /* SECTIONS */
     .section-card {
       background: var(--card);
       border-radius: var(--radius-lg);
@@ -301,7 +305,6 @@
     .chip-strong { border-color: var(--accent); background: var(--accent-soft); color: #0a4b90; }
 
     .project-list { list-style: none; padding-left: 0; margin: 0; }
-
     .project-item {
       margin-bottom: 10px;
       padding-bottom: 8px;
@@ -404,40 +407,12 @@
     @media (max-width: 780px) {
       .hero, .two-column, .reading-grid { grid-template-columns: minmax(0, 1fr); }
     }
+
     @media (max-width: 640px) {
       .nav-links { justify-content: flex-end; }
       .hero { padding: 16px 12px; }
       .section-card { padding: 14px 12px 12px; }
       .page { padding-inline: 12px; }
-    }
-
-    /* --- Single-section view --- */
-    section[data-page] { display: none; }
-    section[data-page].active { display: block; }
-
-    /* --- Clear section headers --- */
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin: 0 0 12px;
-      padding: 10px 12px;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(10, 75, 144, 0.18);
-      background: rgba(10, 75, 144, 0.06);
-    }
-    .section-header .title {
-      font-size: 18px;
-      font-weight: 650;
-      color: #0a4b90;
-      margin: 0;
-    }
-    .section-header .hint {
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0;
-      white-space: nowrap;
     }
   </style>
 </head>
@@ -446,15 +421,13 @@
 <header>
   <div class="nav-inner">
     <div class="brand">
-      <img src="me.png" alt="Photo of Gulusan Erdoğan-Ozgul" class="brand-avatar" />
+      <img src="me1.jpg" alt="Photo of Gulusan Erdoğan-Ozgul" class="brand-avatar" />
       <div class="brand-text">
         <div class="brand-name">Gulusan Erdoğan-Ozgul</div>
         <div class="brand-tag">Machine Learning • Data Science • Decision Systems</div>
       </div>
     </div>
-
     <nav class="nav-links">
-      <a href="#top">Home</a>
       <a href="#about">About</a>
       <a href="#current-work">Current Work</a>
       <a href="#research">Research</a>
@@ -469,9 +442,8 @@
 
 <div class="page">
   <main>
-
-    <!-- HOME / HERO -->
-    <section class="hero" id="top" data-page>
+    <!-- HERO -->
+    <section class="hero" id="top">
       <div>
         <div class="hero-highlight">
           <span class="dot"></span>
@@ -491,7 +463,7 @@
       </div>
 
       <aside class="hero-aside">
-        <img src="me.png" alt="Photo of Gulusan Erdoğan-Ozgul" class="hero-photo" />
+        <img src="me1.jpg" alt="Photo of Gulusan Erdoğan-Ozgul" class="hero-photo" />
         <div class="hero-aside-title">Current focus</div>
         <ul class="hero-list">
           <li>Representation stability (SVD / embeddings) under sparsity and shift.</li>
@@ -502,12 +474,8 @@
       </aside>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" data-page>
-      <div class="section-header">
-        <p class="title">About</p>
-        <p class="hint">Section view</p>
-      </div>
+    <!-- ABOUT (reduced) -->
+    <section id="about">
       <div class="section-card">
         <h2>About</h2>
         <p>
@@ -523,24 +491,42 @@
           I completed MIT Professional Education’s Applied Data Science program and cloud/data training through Great Learning,
           and I’m building a research-oriented portfolio centered on representation behavior, robustness, and evaluation.
         </p>
+
+        <div class="two-column" style="margin-top:10px;">
+          <div>
+            <h3>Education (selected)</h3>
+            <ul>
+              <li><strong>MIT Professional Education — Applied Data Science</strong> (2022)</li>
+              <li><strong>MBA — Northeastern University</strong> (Quant Methods / Finance)</li>
+              <li><strong>MBA — Marmara University</strong> (Thesis: women’s advancement barriers)</li>
+              <li><strong>B.A. — Marmara University</strong> (Business Administration)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Training (selected)</h3>
+            <ul>
+              <li><strong>Data Science on Cloud with AWS</strong> — Great Learning (2023)</li>
+              <li><strong>SQL &amp; Database</strong> — Great Learning (2022)</li>
+              <li><strong>Foundation Models &amp; LLM Architecture</strong> — Great Learning (in progress)</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CURRENT WORK -->
-    <section id="current-work" data-page>
-      <div class="section-header">
-        <p class="title">Current Work</p>
-        <p class="hint">Updated December 2025</p>
-      </div>
+    <section id="current-work">
       <div class="section-card section-highlight">
         <h2>Current Work</h2>
         <p class="section-subtitle">Updated December 2025</p>
+
         <ul>
           <li>Embedding stability in SVD-based collaborative filtering under long-tail sparsity</li>
           <li>Transformer error analysis under distribution shift and ambiguity</li>
           <li>Diagnostics for class imbalance beyond aggregate metrics</li>
           <li>PhD applications (Fall 2026) and research-oriented technical writing</li>
         </ul>
+
         <p>
           The unifying theme: surfacing failures that look “fine” under overall accuracy but break under shift,
           imbalance, or real deployment constraints.
@@ -549,11 +535,7 @@
     </section>
 
     <!-- RESEARCH -->
-    <section id="research" data-page>
-      <div class="section-header">
-        <p class="title">Research</p>
-        <p class="hint">Interests & focus areas</p>
-      </div>
+    <section id="research">
       <div class="section-card">
         <h2>Research Interests</h2>
         <p class="section-subtitle">
@@ -594,178 +576,100 @@
       </div>
     </section>
 
-    <!-- PROJECTS (updated) -->
-    <section id="projects" data-page>
-      <div class="section-header">
-        <p class="title">Projects</p>
-        <p class="hint">Pinned repos</p>
-      </div>
-
+    <!-- PROJECTS -->
+    <section id="projects">
       <div class="section-card">
         <h2>Selected Projects</h2>
         <p class="section-subtitle">
-          Research-oriented projects examining representation behavior, robustness,
-          and evaluation under realistic data and system constraints.
+          Projects illustrating representation analysis, evaluation, and applied ML under realistic conditions.
         </p>
 
         <div class="two-column">
-          <!-- LEFT COLUMN -->
           <div>
-            <h3>Representation & Model Behavior</h3>
+            <h3>Representation &amp; Modeling</h3>
             <ul class="project-list">
-
               <li class="project-item">
-                <div class="project-title">
-                  Representation Geometry in SVD-Based Recommendation Systems
-                  <span class="project-date">(2024–present)</span>
-                </div>
-                <div class="project-meta">
-                  Python • SVD • Collaborative Filtering • Representation Analysis
-                </div>
+                <div class="project-title">SVD-Based Recommendation Systems <span class="project-date">(2024–present)</span></div>
+                <div class="project-meta">Python • Surprise • SVD • Collaborative Filtering</div>
                 <p>
-                  Analyzes how data sparsity and long-tail user–item distributions distort
-                  embedding geometry in SVD-based collaborative filtering models. Examines
-                  instability of latent representations for rare users and items, highlighting
-                  how small perturbations in sparse regimes lead to large representational
-                  shifts that are not captured by aggregate accuracy metrics.
+                  Analyzing how sparsity and long-tail distributions distort embedding geometry in matrix factorization models,
+                  where rare users/items exhibit unstable latent representations under small perturbations.
                 </p>
-                <a href="https://github.com/gulusan2021/representation-geometry-svd"
-                   target="_blank" rel="noopener" class="project-link">
+                <a href="https://github.com/gulusan2021/representation-geometry-svd" target="_blank" rel="noopener" class="project-link">
                   View on GitHub →
                 </a>
               </li>
 
               <li class="project-item">
-                <div class="project-title">
-                  CNN vs. ANN: Representation Behavior in Image Classification
-                  <span class="project-date">(2024)</span>
-                </div>
-                <div class="project-meta">
-                  TensorFlow • CNN • ANN • Inductive Bias
-                </div>
+                <div class="project-title">CNN vs. ANN for Digit Recognition <span class="project-date">(2024)</span></div>
+                <div class="project-meta">TensorFlow • CNN • ANN • MNIST</div>
                 <p>
-                  Compares convolutional and fully connected neural networks on image
-                  classification tasks, focusing on differences in learned representations
-                  and generalization behavior. Investigates how architectural inductive
-                  biases shape feature geometry, robustness, and performance under
-                  varying training conditions.
+                  Comparing architectures under different training regimes and analyzing how inductive bias shapes learned feature geometry.
                 </p>
-                <a href="https://github.com/gulusan2021/cnn-vs-ann-representation"
-                   target="_blank" rel="noopener" class="project-link">
+                <a href="https://github.com/gulusan2021/cnn-vs-ann-representation" target="_blank" rel="noopener" class="project-link">
                   View on GitHub →
                 </a>
               </li>
 
               <li class="project-item">
-                <div class="project-title">
-                  Latent Structure Analysis with PCA and t-SNE
-                  <span class="project-date">(2024)</span>
-                </div>
-                <div class="project-meta">
-                  PCA • t-SNE • Clustering • Diagnostic Analysis
-                </div>
+                <div class="project-title">Dimensionality Reduction &amp; Latent Structure <span class="project-date">(2024)</span></div>
+                <div class="project-meta">PCA • t-SNE • clustering • visualization</div>
                 <p>
-                  Explores latent structure in high-dimensional datasets using PCA and
-                  t-SNE, combined with clustering diagnostics and variance analysis.
-                  Examines when dimensionality reduction reveals meaningful structure
-                  versus when it obscures relationships, emphasizing interpretability
-                  and diagnostic use rather than visualization alone.
+                  Using PCA/t-SNE to study eigenstructure, variance explained, and cluster separation—and when DR hides structure.
                 </p>
-                <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne"
-                   target="_blank" rel="noopener" class="project-link">
+                <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne" target="_blank" rel="noopener" class="project-link">
                   View on GitHub →
                 </a>
               </li>
-
             </ul>
           </div>
 
-          <!-- RIGHT COLUMN -->
           <div>
-            <h3>Evaluation, NLP & System Diagnostics</h3>
+            <h3>NLP, Imbalance &amp; Pipelines</h3>
             <ul class="project-list">
-
               <li class="project-item">
-                <div class="project-title">
-                  Transformer Error Analysis Under Distribution Shift
-                  <span class="project-date">(2024–present)</span>
-                </div>
-                <div class="project-meta">
-                  Hugging Face • NLP • Error Analysis • Distribution Shift
-                </div>
+                <div class="project-title">Transformer Sentiment + Error Analysis <span class="project-date">(2024–present)</span></div>
+                <div class="project-meta">Hugging Face • NLP • Error analysis</div>
                 <p>
-                  Conducts systematic error analysis of transformer-based sentiment
-                  classifiers under linguistic ambiguity and distribution shift. Links
-                  model failures to representational uncertainty, highlighting how
-                  confident predictions can mask systematic errors that standard
-                  evaluation metrics fail to surface.
+                  Studying failure patterns under ambiguity and domain shift, linking representation behavior to errors beyond accuracy/F1.
                 </p>
-                <a href="https://github.com/gulusan2021/transformer-error-analysis"
-                   target="_blank" rel="noopener" class="project-link">
+                <a href="https://github.com/gulusan2021/transformer-error-analysis" target="_blank" rel="noopener" class="project-link">
                   View on GitHub →
                 </a>
               </li>
 
               <li class="project-item">
-                <div class="project-title">
-                  Diagnostics for Class Imbalance in Predictive Models
-                  <span class="project-date">(2024–present)</span>
-                </div>
-                <div class="project-meta">
-                  Imbalanced Data • ROC • Precision–Recall • Threshold Analysis
-                </div>
+                <div class="project-title">Predictive Modeling Under Class Imbalance <span class="project-date">(2024–present)</span></div>
+                <div class="project-meta">Python • imbalanced learning • PR curves</div>
                 <p>
-                  Develops diagnostic frameworks for predictive modeling under severe
-                  class imbalance using ROC curves, precision–recall analysis, and
-                  threshold tuning. Demonstrates how aggregate accuracy can obscure
-                  minority-class failures and proposes evaluation strategies that
-                  better reflect operational risk.
+                  Building models for rare-event prediction and developing diagnostics that reveal minority-class failures hidden by aggregate metrics.
                 </p>
-                <a href="https://github.com/gulusan2021/class-imbalance-diagnostics"
-                   target="_blank" rel="noopener" class="project-link">
+                <a href="https://github.com/gulusan2021/class-imbalance-diagnostics" target="_blank" rel="noopener" class="project-link">
                   View on GitHub →
                 </a>
               </li>
 
               <li class="project-item">
-                <div class="project-title">
-                  Academic Portfolio & Research Website Infrastructure
-                  <span class="project-date">(ongoing)</span>
-                </div>
-                <div class="project-meta">
-                  HTML • CSS • Research Communication
-                </div>
+                <div class="project-title">End-to-End Workflows in Azure ML <span class="project-date">(2023)</span></div>
+                <div class="project-meta">Azure ML • experiment tracking • reproducibility</div>
                 <p>
-                  Academic-style personal website designed to present research interests,
-                  projects, and technical writing in applied machine learning and decision
-                  systems. Emphasizes clarity, structure, and coherence across projects
-                  rather than résumé-style listing.
+                  Deployed ML workflows with reproducible experiments, configuration management, and integration into existing analytics environments.
                 </p>
-                <a href="https://github.com/gulusan2021/gulusan-website"
-                   target="_blank" rel="noopener" class="project-link">
-                  View on GitHub →
-                </a>
               </li>
-
             </ul>
           </div>
         </div>
 
         <p class="project-note" style="margin-top:12px;">
-          <em>
-            These projects form a coherent research portfolio focused on representation
-            behavior, robustness, and evaluation in deployed machine learning systems.
-          </em>
+          <em>Several projects are actively in development. Visit my
+          <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub profile</a>
+          for code and ongoing updates.</em>
         </p>
       </div>
     </section>
 
     <!-- WRITING -->
-    <section id="publications" data-page>
-      <div class="section-header">
-        <p class="title">Writing</p>
-        <p class="hint">Public + in-progress</p>
-      </div>
+    <section id="publications">
       <div class="section-card">
         <h2>Writing</h2>
 
@@ -792,11 +696,7 @@
     </section>
 
     <!-- READING -->
-    <section id="reading" data-page>
-      <div class="section-header">
-        <p class="title">Reading</p>
-        <p class="hint">Influences</p>
-      </div>
+    <section id="reading">
       <div class="section-card">
         <h2>Reading &amp; Intellectual Influences</h2>
         <p>
@@ -815,6 +715,9 @@
                 <em>Thinking in Systems</em> — Donella Meadows<br />
                 <em>Power and Progress</em> — Daron Acemoglu &amp; Simon Johnson
               </div>
+              <div class="reading-note">
+                Influences how I think about feedback loops, structural constraints, and unintended consequences in ML systems.
+              </div>
             </div>
 
             <div class="reading-category">
@@ -824,15 +727,35 @@
                 <em>Empire of AI</em> — Karen Hao<br />
                 <em>Intentional Integrity</em> — Robert Chesnut
               </div>
+              <div class="reading-note">
+                Encourages a critical view of incentives, institutions, and the deployment contexts around AI systems.
+              </div>
+            </div>
+
+            <div class="reading-category">
+              <div class="reading-title">Learning, Algorithms &amp; Cognition</div>
+              <div class="reading-books">
+                <em>Algorithms to Live By</em> — Brian Christian &amp; Tom Griffiths<br />
+                <em>The Language Game</em> — Morten H. Christiansen &amp; Nick Chater<br />
+                <em>Why Machines Learn</em> — Anil Ananthaswamy<br />
+                <em>The Myth of Artificial Intelligence</em> — Erik J. Larson
+              </div>
+              <div class="reading-note">
+                Shapes my interest in learning processes, representations, and comparisons between human and machine reasoning.
+              </div>
             </div>
           </div>
 
           <div>
             <div class="reading-category">
-              <div class="reading-title">Learning, Algorithms &amp; Cognition</div>
+              <div class="reading-title">Technology, Data &amp; Future Systems</div>
               <div class="reading-books">
-                <em>Algorithms to Live By</em> — Brian Christian &amp; Tom Griffiths<br />
-                <em>Why Machines Learn</em> — Anil Ananthaswamy
+                <em>Nexus</em> — Yuval Noah Harari<br />
+                <em>The Sound of the Future</em> — Tobias Dengel<br />
+                <em>Big Data: Understanding How Data Powers Big Business</em> — Wiley
+              </div>
+              <div class="reading-note">
+                Connects large-scale data and computation with economic and institutional change.
               </div>
             </div>
 
@@ -842,6 +765,19 @@
                 <em>Coders</em> — Clive Thompson<br />
                 <em>Python ile Derin Öğrenme</em> — François Chollet
               </div>
+              <div class="reading-note">
+                Reinforces foundations underpinning modern ML systems and deep learning practice.
+              </div>
+            </div>
+
+            <div class="reading-category">
+              <div class="reading-title">Communication &amp; Leadership</div>
+              <div class="reading-books">
+                <em>Speak, Memorably</em> — Bill McGowan
+              </div>
+              <div class="reading-note">
+                Influences how I think about communicating technical ideas and framing ML-driven decisions for diverse audiences.
+              </div>
             </div>
           </div>
         </div>
@@ -849,11 +785,7 @@
     </section>
 
     <!-- TECH STACK -->
-    <section id="tech-stack" data-page>
-      <div class="section-header">
-        <p class="title">Technical Stack</p>
-        <p class="hint">Core tools</p>
-      </div>
+    <section id="tech-stack">
       <div class="section-card">
         <h2>Technical Stack</h2>
         <p class="section-subtitle">Languages, frameworks, and tools I use regularly</p>
@@ -878,11 +810,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" data-page>
-      <div class="section-header">
-        <p class="title">Contact</p>
-        <p class="hint">Reach out</p>
-      </div>
+    <section id="contact">
       <div class="section-card">
         <h2>Contact</h2>
         <p>
@@ -891,10 +819,8 @@
 
         <div class="contact-links">
           <a href="mailto:e.gulusan@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65"
-             target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/gulusan2021"
-             target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub</a>
         </div>
 
         <p style="margin-top:8px;font-size:12px;">
@@ -902,7 +828,6 @@
         </p>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -911,52 +836,7 @@
 </div>
 
 <script>
-  // footer year
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // single-section view
-  const sections = Array.from(document.querySelectorAll("section[data-page]"));
-  const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-
-  function setActiveLink(hash) {
-    navLinks.forEach(a => a.classList.remove("active-link"));
-    const active = navLinks.find(a => a.getAttribute("href") === hash);
-    if (active) active.classList.add("active-link");
-  }
-
-  function showSection(hash) {
-    const id = (hash || "#top").replace("#", "");
-    sections.forEach(s => s.classList.remove("active"));
-
-    const target = document.getElementById(id);
-    if (target && target.matches("section[data-page]")) {
-      target.classList.add("active");
-      setActiveLink("#" + id);
-      history.replaceState(null, "", "#" + id);
-    } else {
-      const hero = document.getElementById("top");
-      hero.classList.add("active");
-      setActiveLink("#top");
-      history.replaceState(null, "", "#top");
-    }
-
-    window.scrollTo(0, 0);
-  }
-
-  // intercept nav clicks
-  navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      const hash = link.getAttribute("href");
-      const id = hash.replace("#", "");
-      if (document.getElementById(id)?.matches("section[data-page]")) {
-        e.preventDefault();
-        showSection(hash);
-      }
-    });
-  });
-
-  // initial load
-  showSection(location.hash || "#top");
 </script>
 </body>
 </html>
