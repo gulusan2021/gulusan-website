@@ -2,31 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Machine Learning, Data Science, Responsible AI, Decision Systems — Academic profile of Gulusan Erdogan-Ozgul.">
+  <meta name="keywords" content="Machine Learning, Data Science, Responsible AI, PhD Candidate, Decision Systems, Representation Learning">
+  <meta name="author" content="Gulusan Erdogan-Ozgul">
 
   <title>Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Academic-style profile of Gulusan Erdoğan-Ozgul, focusing on machine learning, data, representation learning, and decision systems under real-world constraints.">
-  <meta name="keywords" content="machine learning, data science, decision systems, representation learning, robustness, model evaluation, applied machine learning, academic profile">
-  <meta name="author" content="Gulusan Erdoğan-Ozgul">
-
-  <!-- Open Graph (LinkedIn / social previews) -->
-  <meta property="og:title" content="Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems">
-  <meta property="og:description" content="Academic profile focused on machine learning, representation behavior, and decision systems under realistic data and evaluation constraints.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="me.png">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      /* MIT/CSAIL style: white, light gray, navy, minimal */
       --bg: #ffffff;
       --card: #ffffff;
-      --accent: #0a4b90;          /* MIT-ish navy */
+      --accent: #0a4b90;
       --accent-soft: rgba(10, 75, 144, 0.06);
       --accent-highlight: #eef6ff;
       --muted: #4b5563;
@@ -52,12 +42,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: var(--link);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
+    a { color: var(--link); text-decoration: none; transition: all 0.2s ease; }
     a:hover { text-decoration: underline; }
 
     .page {
@@ -90,7 +75,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      min-width: 220px;
     }
 
     .brand-avatar {
@@ -105,25 +89,14 @@
     }
 
     .brand-text { display: flex; flex-direction: column; }
-
-    .brand-name {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      line-height: 1.1;
-    }
-
-    .brand-tag {
-      font-size: 11px;
-      color: var(--muted);
-    }
+    .brand-name { font-size: 15px; font-weight: 600; letter-spacing: 0.01em; }
+    .brand-tag { font-size: 11px; color: var(--muted); }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       font-size: 13px;
-      justify-content: flex-end;
     }
 
     .nav-links a {
@@ -151,10 +124,8 @@
     }
 
     main { margin-top: 22px; }
-
     section { margin-bottom: 34px; }
 
-    /* Section dividers */
     section:not(:last-of-type)::after {
       content: "";
       display: block;
@@ -164,18 +135,9 @@
       margin-top: 34px;
     }
 
-    h1, h2, h3 {
-      margin: 0 0 8px;
-      line-height: 1.2;
-    }
-
-    h1 {
-      font-size: clamp(26px, 3.6vw, 32px);
-      letter-spacing: 0.01em;
-    }
-
+    h1, h2, h3 { margin: 0 0 8px; line-height: 1.2; }
+    h1 { font-size: clamp(26px, 3.6vw, 32px); letter-spacing: 0.01em; }
     h2 { font-size: 21px; margin-bottom: 14px; }
-
     h3 { font-size: 16px; margin-top: 12px; }
 
     p {
@@ -202,11 +164,7 @@
 
     .hero:hover { box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12); }
 
-    .hero-sub {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
+    .hero-sub { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 
     .hero-highlight {
       display: inline-flex;
@@ -291,32 +249,13 @@
       background: #e5e7eb;
     }
 
-    .hero-list {
-      list-style: none;
-      padding: 0;
-      margin: 4px 0 0;
-      width: 100%;
-    }
+    .hero-list { list-style: none; padding: 0; margin: 4px 0 0; width: 100%; }
+    .hero-list li { margin-bottom: 5px; display: flex; gap: 6px; color: var(--muted); }
+    .hero-list li::before { content: "•"; color: var(--accent); }
 
-    .hero-list li {
-      margin-bottom: 5px;
-      display: flex;
-      gap: 6px;
-      color: var(--muted);
-    }
+    .hero-aside-title { font-size: 13px; font-weight: 600; margin-top: 2px; }
 
-    .hero-list li::before {
-      content: "•";
-      color: var(--accent);
-    }
-
-    .hero-aside-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 2px;
-    }
-
-    /* SECTIONS */
+    /* SECTION CARDS */
     .section-card {
       background: var(--card);
       border-radius: var(--radius-lg);
@@ -331,15 +270,10 @@
       transform: translateY(-2px);
     }
 
-    /* Highlight for Current Work section */
     .section-highlight {
       background: var(--accent-highlight);
       border-color: var(--accent);
       border-width: 2px;
-    }
-
-    .section-highlight:hover {
-      box-shadow: 0 12px 24px rgba(10, 75, 144, 0.15);
     }
 
     .two-column {
@@ -348,28 +282,12 @@
       gap: 18px;
     }
 
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
+    .section-subtitle { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 
     ul { padding-left: 18px; margin: 4px 0 8px; }
+    li { margin-bottom: 3px; font-size: 13px; color: var(--muted); line-height: 1.5; }
 
-    li {
-      margin-bottom: 3px;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 5px 0 4px;
-    }
-
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 5px 0 4px; }
     .chip {
       padding: 2px 8px;
       border-radius: var(--radius-pill);
@@ -380,59 +298,19 @@
       white-space: nowrap;
       transition: all 0.2s ease;
     }
+    .chip:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1); }
+    .chip-strong { border-color: var(--accent); background: var(--accent-soft); color: #0a4b90; }
 
-    .chip:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
-    }
-
-    .chip-strong {
-      border-color: var(--accent);
-      background: var(--accent-soft);
-      color: #0a4b90;
-    }
-
-    .project-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
+    .project-list { list-style: none; padding-left: 0; margin: 0; }
     .project-item {
       margin-bottom: 10px;
       padding-bottom: 8px;
       border-bottom: 1px dashed rgba(209, 213, 219, 0.9);
     }
-
-    .project-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .project-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 1px;
-    }
-
-    .project-meta {
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 3px;
-    }
-
-    .project-note {
-      font-size: 12px;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .project-date {
-      font-size: 11px;
-      color: #888;
-      font-style: italic;
-    }
-
+    .project-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .project-title { font-size: 14px; font-weight: 600; margin-bottom: 1px; }
+    .project-meta { font-size: 11px; color: var(--muted); margin-bottom: 3px; }
+    .project-date { font-size: 11px; color: #888; font-style: italic; }
     .project-link {
       display: inline-block;
       margin-top: 4px;
@@ -441,20 +319,33 @@
       text-decoration: none;
       transition: all 0.2s ease;
     }
+    .project-link:hover { text-decoration: underline; transform: translateX(3px); }
+    .project-note { font-size: 12px; color: var(--muted); font-style: italic; }
 
-    .project-link:hover {
-      text-decoration: underline;
-      transform: translateX(3px);
+    /* READING */
+    .reading-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 16px;
+    }
+
+    .reading-category { margin-bottom: 10px; }
+    .reading-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+    .reading-books { font-size: 12px; color: var(--muted); }
+    .reading-note { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+    .reading-image { margin-bottom: 12px; text-align: center; }
+    .reading-image img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
+      border: 1px solid var(--border);
+      background: #f9fafb;
     }
 
     /* Tech stack badges */
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 12px 0;
-    }
-
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
     .tech-badge {
       padding: 3px 10px;
       border-radius: var(--radius-pill);
@@ -465,48 +356,10 @@
       font-weight: 500;
       transition: all 0.2s ease;
     }
-
     .tech-badge:hover {
       background: #e0e7ff;
       transform: translateY(-1px);
       box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
-    }
-
-    /* READING */
-    .reading-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-      gap: 16px;
-    }
-
-    .reading-category { margin-bottom: 10px; }
-
-    .reading-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .reading-books {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .reading-note {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 3px;
-    }
-
-    .reading-image { margin-bottom: 12px; text-align: center; }
-
-    .reading-image img {
-      max-width: 420px;
-      width: 100%;
-      border-radius: var(--radius-lg);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.14);
-      border: 1px solid var(--border);
-      background: #f9fafb;
     }
 
     /* CONTACT */
@@ -517,7 +370,6 @@
       font-size: 13px;
       margin-top: 6px;
     }
-
     .contact-links a {
       padding: 4px 10px;
       border-radius: var(--radius-pill);
@@ -526,7 +378,6 @@
       color: var(--muted);
       transition: all 0.2s ease;
     }
-
     .contact-links a:hover {
       border-color: rgba(209, 213, 219, 0.9);
       background: #f3f4f6;
@@ -544,33 +395,24 @@
       text-align: center;
     }
 
-    /* Status labels */
-    .status {
-      font-size: 11px;
-      color: #888;
-      font-style: italic;
-      margin-left: 4px;
-    }
+    .status { font-size: 11px; color: #888; font-style: italic; margin-left: 4px; }
 
     /* RESPONSIVE */
     @media (max-width: 780px) {
       .hero, .two-column, .reading-grid { grid-template-columns: minmax(0, 1fr); }
     }
-
     @media (max-width: 640px) {
       .nav-links { justify-content: flex-end; }
       .hero { padding: 16px 12px; }
       .section-card { padding: 14px 12px 12px; }
       .page { padding-inline: 12px; }
-      .brand { min-width: auto; }
     }
 
-    /* ---------------------------
-       SINGLE SECTION VIEW + BANNERS
-       --------------------------- */
+    /* --- SINGLE SECTION VIEW --- */
     section[data-page] { display: none; }
     section[data-page].active { display: block; }
 
+    /* --- SECTION BANNERS --- */
     .section-banner {
       display: flex;
       align-items: baseline;
@@ -582,14 +424,12 @@
       border: 1px solid rgba(10, 75, 144, 0.18);
       background: rgba(10, 75, 144, 0.06);
     }
-
     .section-banner .title {
       font-size: 18px;
       font-weight: 650;
       color: #0a4b90;
       margin: 0;
     }
-
     .section-banner .hint {
       font-size: 12px;
       color: var(--muted);
@@ -609,6 +449,7 @@
         <div class="brand-tag">Machine Learning • Data Science • Decision Systems</div>
       </div>
     </div>
+
     <nav class="nav-links">
       <a href="#top">Home</a>
       <a href="#about">About</a>
@@ -617,7 +458,7 @@
       <a href="#projects">Projects</a>
       <a href="#publications">Writing</a>
       <a href="#reading">Reading</a>
-      <a href="#tech-stack">Tech Stack</a>
+      <a href="#tech-stack">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -625,8 +466,7 @@
 
 <div class="page">
   <main>
-
-    <!-- HERO (HOME) -->
+    <!-- HOME / HERO -->
     <section class="hero" id="top" data-page>
       <div class="section-banner">
         <p class="title">Home</p>
@@ -639,16 +479,18 @@
           <span>Machine Learning &amp; Data Science • U.S. Citizen</span>
         </div>
 
-        <h1>Machine Learning, Data-Centric AI & System-Level Behavior</h1>
+        <h1>Applied ML, Representation Behavior, and Real-World Evaluation</h1>
 
-        <!-- Option A (selected) -->
         <p class="hero-sub">
-          I work at the intersection of machine learning, data, and decision systems, studying how modeling choices and learned representations behave under realistic data conditions and evaluation constraints.
+          I work on applied machine learning problems where models are deployed inside real decision systems.
+          My research focuses on how learned representations behave under distribution shift, data imbalance,
+          and organizational constraints, and how these conditions shape robustness and evaluation in practice.
         </p>
 
         <div class="hero-buttons">
-          <a href="#research" class="btn btn-primary">Research</a>
-          <a href="#projects" class="btn">Selected Work</a>
+          <a href="#research" class="btn btn-primary">Explore Research</a>
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn">Contact</a>
         </div>
       </div>
 
@@ -656,10 +498,10 @@
         <img src="me.png" alt="Photo of Gulusan Erdoğan-Ozgul" class="hero-photo" />
         <div class="hero-aside-title">Current focus</div>
         <ul class="hero-list">
-          <li>Representation learning and dimensionality reduction (PCA, SVD, t-SNE).</li>
-          <li>Data-centric ML, diagnostics, and evaluation beyond single metrics.</li>
-          <li>Customer behavior modeling and sentiment analysis with modern NLP.</li>
-          <li>Decision systems and how ML interacts with organizational processes.</li>
+          <li>Representation stability (SVD / embeddings) under sparsity and shift.</li>
+          <li>Error analysis and evaluation beyond single headline metrics.</li>
+          <li>Robustness diagnostics for imbalanced and ambiguous data.</li>
+          <li>ML behavior inside real decision and organizational pipelines.</li>
         </ul>
       </aside>
     </section>
@@ -694,47 +536,6 @@
           portfolio that bridges hands-on ML work with broader questions about
           robustness, governance, and decision impact.
         </p>
-        <p>
-          Throughout my career, I have mentored junior analysts on ML modeling,
-          drift detection, and evaluation frameworks, and led internal knowledge
-          sessions on bias detection and model validation. I believe effective
-          mentorship involves helping others build intuition about <em>why</em>
-          methods work, not just <em>how</em> to apply them.
-        </p>
-
-        <div class="two-column" style="margin-top:10px;">
-          <div>
-            <h3>Education</h3>
-            <p class="section-subtitle">Degrees & formal programs</p>
-            <ul>
-              <li>
-                <strong>MIT Professional Education – Applied Data Science Program</strong> (2022)<br />
-                Supervised / unsupervised learning, SVD, PCA, optimization, probabilistic modeling.
-              </li>
-              <li>
-                <strong>MBA, Northeastern University</strong><br />
-                Concentrations in Quantitative Methods, Investments, and Corporate Finance.
-              </li>
-              <li>
-                <strong>MBA, Marmara University — Institute of Social Sciences</strong><br />
-                Thesis: Obstacles to Career Advancement for Women Managers in the Textile Sector.
-              </li>
-              <li>
-                <strong>B.A., Business Administration, Marmara University</strong>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Certifications & Additional Training</h3>
-            <p class="section-subtitle">Selected credentials</p>
-            <ul>
-              <li><strong>Advanced Foundation Models & LLM Architecture</strong> — Great Learning (in progress)</li>
-              <li><strong>Applied Data Science</strong> — MIT Professional Education (2022)</li>
-              <li><strong>Data Science on Cloud with AWS</strong> — Great Learning (2023)</li>
-              <li><strong>SQL & Database Certification</strong> — Great Learning (2022)</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -766,7 +567,7 @@
       </div>
     </section>
 
-    <!-- RESEARCH INTERESTS -->
+    <!-- RESEARCH -->
     <section id="research" data-page>
       <div class="section-banner">
         <p class="title">Research</p>
@@ -801,8 +602,7 @@
             <h3>Decision Systems & Governance</h3>
             <p>
               Beyond individual models, I am interested in how ML systems sit inside
-              larger sociotechnical workflows, especially in high-stakes or
-              resource-constrained environments.
+              larger sociotechnical workflows.
             </p>
             <div class="chip-row">
               <span class="chip chip-strong">Decision systems & metrics</span>
@@ -820,88 +620,85 @@
     <section id="projects" data-page>
       <div class="section-banner">
         <p class="title">Projects</p>
-        <p class="hint">Pinned repositories</p>
+        <p class="hint">Pinned repos</p>
       </div>
 
       <div class="section-card">
         <h2>Selected Projects</h2>
         <p class="section-subtitle">
-          Examples illustrating my experience with representation learning,
-          evaluation, and applied ML in realistic settings.
+          Research-oriented projects examining representation behavior, robustness,
+          and evaluation under realistic data and system constraints.
         </p>
 
         <div class="two-column">
           <div>
-            <h3>Representation & Modeling</h3>
+            <h3>Representation & Model Behavior</h3>
             <ul class="project-list">
+
               <li class="project-item">
                 <div class="project-title">representation-geometry-svd <span class="project-date">(pinned)</span></div>
-                <div class="project-meta">Python • Surprise Library • SVD • Collaborative Filtering</div>
+                <div class="project-meta">Python • SVD • Collaborative Filtering</div>
                 <p>Analyzing how data sparsity and long-tail distributions distort embedding geometry in SVD-based collaborative filtering models.</p>
-                <a href="https://github.com/gulusan2021/representation-geometry-svd"
-                   target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+                <a href="https://github.com/gulusan2021/representation-geometry-svd" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
               </li>
 
               <li class="project-item">
                 <div class="project-title">cnn-vs-ann-representation <span class="project-date">(pinned)</span></div>
-                <div class="project-meta">TensorFlow • CNN • ANN • Image Classification</div>
+                <div class="project-meta">TensorFlow • CNN • ANN</div>
                 <p>Comparing representation behavior and generalization of CNN and ANN models on image classification tasks.</p>
-                <a href="https://github.com/gulusan2021/cnn-vs-ann-representation"
-                   target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+                <a href="https://github.com/gulusan2021/cnn-vs-ann-representation" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
               </li>
 
               <li class="project-item">
                 <div class="project-title">latent-structure-analysis-pca-tsne <span class="project-date">(pinned)</span></div>
-                <div class="project-meta">PCA • t-SNE • Clustering • Diagnostics</div>
+                <div class="project-meta">PCA • t-SNE • clustering</div>
                 <p>Exploring latent structure in high-dimensional data using PCA, t-SNE, and clustering diagnostics.</p>
-                <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne"
-                   target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+                <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
               </li>
+
             </ul>
           </div>
 
           <div>
-            <h3>NLP, Imbalanced Data & Diagnostics</h3>
+            <h3>Evaluation, NLP & Diagnostics</h3>
             <ul class="project-list">
+
               <li class="project-item">
                 <div class="project-title">transformer-error-analysis <span class="project-date">(pinned)</span></div>
-                <div class="project-meta">Hugging Face Transformers • NLP • Error Analysis</div>
+                <div class="project-meta">Hugging Face • NLP</div>
                 <p>Systematic error analysis of transformer-based sentiment classifiers under ambiguity and distribution shift.</p>
-                <a href="https://github.com/gulusan2021/transformer-error-analysis"
-                   target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+                <a href="https://github.com/gulusan2021/transformer-error-analysis" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
               </li>
 
               <li class="project-item">
                 <div class="project-title">class-imbalance-diagnostics <span class="project-date">(pinned)</span></div>
                 <div class="project-meta">ROC • PR curves • Threshold analysis</div>
                 <p>Diagnostics for predictive models under severe class imbalance using ROC, PR curves, and threshold analysis.</p>
-                <a href="https://github.com/gulusan2021/class-imbalance-diagnostics"
-                   target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+                <a href="https://github.com/gulusan2021/class-imbalance-diagnostics" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
               </li>
 
               <li class="project-item">
                 <div class="project-title">gulusan-website <span class="project-date">(pinned)</span></div>
-                <div class="project-meta">HTML • CSS • Single-page academic profile</div>
-                <p>Personal academic-style website and portfolio.</p>
-                <a href="https://github.com/gulusan2021/gulusan-website"
-                   target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+                <div class="project-meta">HTML • CSS</div>
+                <p>PinnedLoading gulusan-website Public</p>
+                <a href="https://github.com/gulusan2021/gulusan-website" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
               </li>
+
             </ul>
           </div>
         </div>
 
         <p class="project-note" style="margin-top:12px;">
-          <em>Visit my <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub profile</a>
-          for code and ongoing updates.</em>
+          <em>Visit my <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub profile</a> for more projects.</em>
         </p>
       </div>
     </section>
 
-    <!-- PUBLICATIONS & TECHNICAL WRITING -->
+    <!-- WRITING -->
     <section id="publications" data-page>
       <div class="section-banner">
         <p class="title">Writing</p>
-        <p class="hint">Published + in progress</p>
+        <p class="hint">Public + in progress</p>
       </div>
 
       <div class="section-card">
@@ -917,30 +714,13 @@
             Master's Thesis, Marmara University (in Turkish). Listed in the YÖK National Thesis Center.
           </li>
         </ul>
-        <p>
-          This empirical work used survey data, hypothesis testing, correlation analysis,
-          and organizational behavior frameworks to examine structural and cultural
-          barriers to women's advancement. It sparked my long-term interest in systems,
-          metrics, and institutional decision-making—themes that continue to inform my
-          approach to machine learning and data systems.
-        </p>
 
         <h3 style="margin-top:16px;">Technical Writing (In Development)</h3>
         <ul>
-          <li><strong>Representation Geometry in Matrix Factorization Models</strong>
-            <span class="status">(draft)</span> — Examining how sparsity patterns distort embedding spaces
-          </li>
-          <li><strong>Diagnostic Methods for Class Imbalance: Beyond Aggregate Accuracy</strong>
-            <span class="status">(in progress)</span> — Evaluation under severe imbalance
-          </li>
-          <li><strong>Transformer Error Analysis Under Distribution Shift</strong>
-            <span class="status">(in progress)</span> — Failure patterns in fine-tuned sentiment classifiers
-          </li>
+          <li><strong>Representation Geometry in Matrix Factorization Models</strong> <span class="status">(draft)</span></li>
+          <li><strong>Diagnostic Methods for Class Imbalance: Beyond Aggregate Accuracy</strong> <span class="status">(in progress)</span></li>
+          <li><strong>Transformer Error Analysis Under Distribution Shift</strong> <span class="status">(in progress)</span></li>
         </ul>
-
-        <p class="project-note">
-          <em>Preliminary technical findings from ongoing projects. These represent work-in-progress as I transition toward research-oriented inquiry.</em>
-        </p>
       </div>
     </section>
 
@@ -954,93 +734,11 @@
       <div class="section-card">
         <h2>Reading & Intellectual Influences</h2>
         <p>
-          My reading spans systems thinking, machine learning, AI governance, and the
-          relationships between technology, institutions, and society. I'm especially
-          drawn to books that connect technical ideas with structural and historical
-          perspective.
+          My reading spans systems thinking, machine learning, AI governance, and the relationships between technology, institutions, and society.
         </p>
 
         <div class="reading-image">
           <img src="books.jpg" alt="Books on AI, systems, data science, and algorithms" />
-        </div>
-
-        <div class="reading-grid" style="margin-top:12px;">
-          <div>
-            <div class="reading-category">
-              <div class="reading-title">Systems & Complex Environments</div>
-              <div class="reading-books">
-                <em>Thinking in Systems</em> — Donella Meadows<br />
-                <em>Power and Progress</em> — Daron Acemoglu &amp; Simon Johnson
-              </div>
-              <div class="reading-note">
-                Influences how I think about feedback loops, structural constraints,
-                and unintended consequences in ML systems.
-              </div>
-            </div>
-
-            <div class="reading-category">
-              <div class="reading-title">AI Governance & Sociotechnical Perspectives</div>
-              <div class="reading-books">
-                <em>AI Snake Oil</em> — Arvind Narayanan &amp; Sayash Kapoor<br />
-                <em>Empire of AI</em> — Karen Hao<br />
-                <em>Intentional Integrity</em> — Robert Chesnut
-              </div>
-              <div class="reading-note">
-                Encourages a critical view of incentives, institutions, and the
-                deployment contexts around AI systems.
-              </div>
-            </div>
-
-            <div class="reading-category">
-              <div class="reading-title">Learning, Algorithms & Cognition</div>
-              <div class="reading-books">
-                <em>Algorithms to Live By</em> — Brian Christian &amp; Tom Griffiths<br />
-                <em>The Language Game</em> — Morten H. Christiansen &amp; Nick Chater<br />
-                <em>Why Machines Learn</em> — Anil Ananthaswamy<br />
-                <em>The Myth of Artificial Intelligence</em> — Erik J. Larson
-              </div>
-              <div class="reading-note">
-                Shapes my interest in learning processes, representations, and
-                comparisons between human and machine reasoning.
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="reading-category">
-              <div class="reading-title">Technology, Data & Future Systems</div>
-              <div class="reading-books">
-                <em>Nexus</em> — Yuval Noah Harari<br />
-                <em>The Sound of the Future</em> — Tobias Dengel<br />
-                <em>Big Data: Understanding How Data Powers Big Business</em> — Wiley
-              </div>
-              <div class="reading-note">
-                Connects large-scale data and computation with economic and institutional change.
-              </div>
-            </div>
-
-            <div class="reading-category">
-              <div class="reading-title">Computing & Deep Learning Foundations</div>
-              <div class="reading-books">
-                <em>Coders</em> — Clive Thompson<br />
-                <em>Python ile Derin Öğrenme</em> — François Chollet
-              </div>
-              <div class="reading-note">
-                Reinforces the foundations underpinning modern ML systems and deep learning practice.
-              </div>
-            </div>
-
-            <div class="reading-category">
-              <div class="reading-title">Communication & Leadership</div>
-              <div class="reading-books">
-                <em>Speak, Memorably</em> — Bill McGowan
-              </div>
-              <div class="reading-note">
-                Influences how I think about communicating technical ideas and framing
-                ML-driven decisions for diverse audiences.
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -1048,7 +746,7 @@
     <!-- TECH STACK -->
     <section id="tech-stack" data-page>
       <div class="section-banner">
-        <p class="title">Tech Stack</p>
+        <p class="title">Technical Stack</p>
         <p class="hint">Tools</p>
       </div>
 
@@ -1071,25 +769,29 @@
           <span class="tech-badge">Git</span>
           <span class="tech-badge">Jupyter</span>
           <span class="tech-badge">Matplotlib</span>
-          <span class="tech-badge">Seaborn</span>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT (MINIMAL: remove redundancy) -->
+    <!-- CONTACT -->
     <section id="contact" data-page>
       <div class="section-banner">
         <p class="title">Contact</p>
-        <p class="hint">Links</p>
+        <p class="hint">Reach out</p>
       </div>
 
       <div class="section-card">
+        <h2>Contact</h2>
+        <p>
+          I welcome conversations related to machine learning, data-centric AI, analytics for decision systems, and interdisciplinary collaborations.
+        </p>
+
         <div class="contact-links">
           <a href="mailto:e.gulusan@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65"
-             target="_blank" rel="noopener">LinkedIn</a>
         </div>
+
         <p style="margin-top:8px;font-size:12px;">
           Based in the Boston metropolitan area, USA • U.S. Citizen
         </p>
@@ -1118,6 +820,7 @@
 
   function showSectionById(id) {
     const targetId = (id || "top").replace("#", "");
+
     sections.forEach(s => s.classList.remove("active"));
 
     const target = document.getElementById(targetId);
@@ -1132,7 +835,6 @@
       history.replaceState(null, "", "#top");
     }
 
-    // Ensure banner + section title are visible at top
     window.scrollTo(0, 0);
   }
 
