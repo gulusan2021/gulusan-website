@@ -23,6 +23,7 @@
       --card: #ffffff;
       --accent: #0a4b90;          /* MIT-ish navy */
       --accent-soft: rgba(10, 75, 144, 0.06);
+      --accent-highlight: #eef6ff;
       --muted: #4b5563;
       --text: #111827;
       --border: #e5e7eb;
@@ -51,6 +52,7 @@
     a {
       color: var(--link);
       text-decoration: none;
+      transition: all 0.2s ease;
     }
 
     a:hover {
@@ -93,7 +95,7 @@
     .brand-avatar {
       width: 38px;
       height: 38px;
-      border-radius: 6px;         /* square small version */
+      border-radius: 6px;
       object-fit: cover;
       object-position: center 25%;
       border: 1px solid #e5e7eb;
@@ -130,23 +132,15 @@
       border: 1px solid transparent;
       color: var(--muted);
       background: transparent;
+      transition: all 0.2s ease;
     }
 
     .nav-links a:hover {
       border-color: rgba(209, 213, 219, 0.9);
       color: #111827;
       background: #f3f4f6;
-    }
-
-    .pill-primary {
-      border-color: var(--accent);
-      color: #ffffff;
-      background: var(--accent);
-      font-weight: 500;
-    }
-
-    .pill-primary:hover {
-      background: #083867;
+      text-decoration: none;
+      transform: translateY(-1px);
     }
 
     main {
@@ -155,6 +149,16 @@
 
     section {
       margin-bottom: 34px;
+    }
+
+    /* Section dividers */
+    section:not(:last-of-type)::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+      margin-top: 34px;
     }
 
     h1, h2, h3 {
@@ -197,6 +201,11 @@
       background: var(--card);
       box-shadow: var(--shadow-soft);
       border: 1px solid var(--border);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .hero:hover {
+      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
     }
 
     .hero-sub {
@@ -223,6 +232,12 @@
       height: 8px;
       border-radius: 50%;
       background: #16a34a;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
     }
 
     .hero-buttons {
@@ -244,10 +259,14 @@
       font-size: 13px;
       text-decoration: none;
       cursor: pointer;
+      transition: all 0.2s ease;
     }
 
     .btn:hover {
       background: #f3f4f6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+      text-decoration: none;
     }
 
     .btn-primary {
@@ -316,6 +335,23 @@
       padding: 16px 16px 14px;
       border: 1px solid var(--border);
       box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Highlight for Current Work section */
+    .section-highlight {
+      background: var(--accent-highlight);
+      border-color: var(--accent);
+      border-width: 2px;
+    }
+
+    .section-highlight:hover {
+      box-shadow: 0 12px 24px rgba(10, 75, 144, 0.15);
     }
 
     .two-column {
@@ -357,6 +393,12 @@
       font-size: 11px;
       color: var(--muted);
       white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .chip:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
     }
 
     .chip-strong {
@@ -412,10 +454,37 @@
       font-size: 12px;
       color: var(--link);
       text-decoration: none;
+      transition: all 0.2s ease;
     }
 
     .project-link:hover {
       text-decoration: underline;
+      transform: translateX(3px);
+    }
+
+    /* Tech stack badges */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .tech-badge {
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      background: #f0f4ff;
+      border: 1px solid #c7d2fe;
+      font-size: 11px;
+      color: #4c5f8f;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .tech-badge:hover {
+      background: #e0e7ff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
     }
 
     /* READING */
@@ -461,7 +530,7 @@
       background: #f9fafb;
     }
 
-    /* CV & CONTACT */
+    /* CONTACT */
 
     .contact-links {
       display: flex;
@@ -477,12 +546,15 @@
       border: 1px solid var(--border);
       background: #f9fafb;
       color: var(--muted);
+      transition: all 0.2s ease;
     }
 
     .contact-links a:hover {
       border-color: rgba(209, 213, 219, 0.9);
       background: #f3f4f6;
       color: #111827;
+      text-decoration: none;
+      transform: translateY(-1px);
     }
 
     footer {
@@ -494,7 +566,7 @@
       text-align: center;
     }
 
-    /* NEW: Status labels for in-development work */
+    /* Status labels */
     .status {
       font-size: 11px;
       color: #888;
@@ -532,7 +604,6 @@
 <header>
   <div class="nav-inner">
     <div class="brand">
-      <!-- Your small avatar: file must be named me.jpg -->
       <img src="me.jpg" alt="Photo of Gulusan Erdoğan-Ozgul" class="brand-avatar" />
       <div class="brand-text">
         <div class="brand-name">Gulusan Erdoğan-Ozgul</div>
@@ -542,15 +613,10 @@
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#current-work">Current Work</a>
-      <a href="#research">Interests</a>
+      <a href="#research">Research</a>
       <a href="#projects">Projects</a>
-      <a href="#writing">Writing</a>
       <a href="#publications">Publications</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#talks">Talks</a>
-      <a href="#tools">Tools</a>
       <a href="#reading">Reading</a>
-      <a href="#cv" class="pill-primary">CV</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -573,14 +639,13 @@
           under realistic data and organizational constraints.
         </p>
         <div class="hero-buttons">
-          <a href="#research" class="btn btn-primary">Explore Interests</a>
+          <a href="#research" class="btn btn-primary">Explore Research</a>
           <a href="#projects" class="btn">View Projects</a>
           <a href="#reading" class="btn">Reading &amp; Influences</a>
         </div>
       </div>
 
       <aside class="hero-aside">
-        <!-- Larger portrait in hero -->
         <img src="me.jpg" alt="Photo of Gulusan Erdoğan-Ozgul" class="hero-photo" />
         <div class="hero-aside-title">Current focus</div>
         <ul class="hero-list">
@@ -604,7 +669,7 @@
           reduction (PCA, t-SNE), and quantitative segmentation.
         </p>
         <p>
-          I originally trained in business and management and hold an MBA. My master's
+          I originally trained in business and management and hold two MBAs. My master's
           research examined structural barriers to career advancement for women managers
           through survey-based empirical analysis. That work introduced me to
           system-level thinking, feedback loops, and how metrics and structures
@@ -616,6 +681,13 @@
           through MIT Professional Education and Great Learning, and I am building a
           portfolio that bridges hands-on ML work with broader questions about
           robustness, governance, and decision impact.
+        </p>
+        <p>
+          Throughout my career, I have mentored junior analysts on ML modeling, 
+          drift detection, and evaluation frameworks, and led internal knowledge 
+          sessions on bias detection and model validation. I believe effective 
+          mentorship involves helping others build intuition about <em>why</em> 
+          methods work, not just <em>how</em> to apply them.
         </p>
 
         <div class="two-column" style="margin-top:10px;">
@@ -632,8 +704,8 @@
                 Concentrations in Quantitative Methods, Investments, and Corporate Finance.
               </li>
               <li>
-                <strong>Master's, Business Administration, Marmara University</strong><br />
-                Empirical thesis on obstacles to career advancement for women managers in the textile sector.
+                <strong>MBA, Marmara University — Institute of Social Sciences</strong><br />
+                Thesis: Obstacles to Career Advancement for Women Managers in the Textile Sector.
               </li>
               <li>
                 <strong>B.A., Business Administration, Marmara University</strong>
@@ -654,9 +726,9 @@
       </div>
     </section>
 
-    <!-- CURRENT WORK -->
+    <!-- CURRENT WORK (HIGHLIGHTED) -->
     <section id="current-work">
-      <div class="section-card">
+      <div class="section-card section-highlight">
         <h2>Current Work</h2>
         <p class="section-subtitle">Updated December 2024</p>
         
@@ -677,10 +749,10 @@
       </div>
     </section>
 
-    <!-- INTERESTS -->
+    <!-- RESEARCH INTERESTS -->
     <section id="research">
       <div class="section-card">
-        <h2>Areas of Interest</h2>
+        <h2>Research Interests</h2>
         <p class="section-subtitle">
           I am particularly interested in how data, representations, and system
           design choices shape model behavior and decision impact.
@@ -722,7 +794,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS (ENHANCED with GitHub links and dates) -->
+    <!-- PROJECTS -->
     <section id="projects">
       <div class="section-card">
         <h2>Selected Projects</h2>
@@ -826,48 +898,15 @@
       </div>
     </section>
 
-    <!-- WRITING & TECHNICAL NOTES (NEW SECTION) -->
-    <section id="writing">
-      <div class="section-card">
-        <h2>Writing & Technical Notes</h2>
-        
-        <p>
-          I am developing a series of technical explorations examining representation 
-          learning, embedding geometry, and diagnostic methods in machine learning systems. 
-          These writings bridge applied experience with research-oriented inquiry.
-        </p>
-        
-        <h3>In Development</h3>
-        <ul>
-          <li><strong>Representation Geometry in Matrix Factorization Models</strong> — 
-          Examining how sparsity patterns distort embedding spaces in SVD-based collaborative filtering</li>
-          
-          <li><strong>Diagnostic Methods for Class Imbalance</strong> — 
-          Beyond aggregate accuracy: representation-level evaluation under severe imbalance</li>
-          
-          <li><strong>Transformer Error Analysis Under Distribution Shift</strong> — 
-          Systematic investigation of failure patterns in fine-tuned sentiment classifiers</li>
-          
-          <li><strong>From Aggregate Metrics to Representation Diagnostics</strong> — 
-          Why standard evaluation masks instabilities in learned representations</li>
-        </ul>
-        
-        <p class="project-note">
-          <em>Technical notes and preliminary findings will be shared 
-          on this site and through my GitHub repositories as work progresses.</em>
-        </p>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS (EXPANDED) -->
+    <!-- PUBLICATIONS & TECHNICAL WRITING -->
     <section id="publications">
       <div class="section-card">
-        <h2>Publications & Academic Work</h2>
+        <h2>Publications & Technical Writing</h2>
         
-        <h3>Master's Thesis</h3>
+        <h3>Published Work</h3>
         <ul>
           <li>
-            <strong>Erdogan-Ozgul, G.</strong> (2002).
+            <strong>Erdogan-Ozgul, G.</strong>
             <em>Obstacles to Career Advancement for Women Managers:
               A Social Responsibility Perspective in Business Management
               (A Survey in the Textile Sector).</em><br />
@@ -882,136 +921,28 @@
           approach to machine learning and data systems.
         </p>
 
-        <h3>Technical Writing (In Development)</h3>
+        <h3 style="margin-top:16px;">Technical Writing (In Development)</h3>
         <ul>
           <li><strong>Representation Geometry in Matrix Factorization Models</strong> 
-          <span class="status">(draft)</span></li>
+          <span class="status">(draft)</span> — 
+          Examining how sparsity patterns distort embedding spaces in SVD-based collaborative filtering
+          </li>
           
           <li><strong>Diagnostic Methods for Class Imbalance: Beyond Aggregate Accuracy</strong> 
-          <span class="status">(in progress)</span></li>
+          <span class="status">(in progress)</span> — 
+          Representation-level evaluation under severe imbalance
+          </li>
           
-          <li><strong>Error Analysis in Fine-Tuned Transformers Under Distribution Shift</strong> 
-          <span class="status">(in progress)</span></li>
+          <li><strong>Transformer Error Analysis Under Distribution Shift</strong> 
+          <span class="status">(in progress)</span> — 
+          Systematic investigation of failure patterns in fine-tuned sentiment classifiers
+          </li>
         </ul>
         
         <p class="project-note">
           <em>Preliminary technical findings from ongoing projects. 
           These represent work-in-progress as I transition toward research-oriented inquiry.</em>
         </p>
-      </div>
-    </section>
-
-    <!-- TEACHING & MENTORSHIP (NEW SECTION) -->
-    <section id="teaching">
-      <div class="section-card">
-        <h2>Teaching & Mentorship</h2>
-        
-        <p>
-          Throughout my career in analytics and data science, I have supported the 
-          development of junior team members and contributed to knowledge-sharing initiatives 
-          within organizations.
-        </p>
-        
-        <h3>Mentorship Experience</h3>
-        <ul>
-          <li><strong>Junior Analyst Mentoring</strong> — Guided analysts on ML modeling, 
-          drift detection, and evaluation frameworks; focused on helping team members 
-          develop systematic approaches to model diagnostics and validation</li>
-          
-          <li><strong>Internal Knowledge Sessions</strong> — Led technical sessions on 
-          bias detection, model validation, and representation-level diagnostics; designed 
-          content to bridge applied practice with conceptual understanding</li>
-          
-          <li><strong>Cross-Functional ML Guidance</strong> — Supported non-technical 
-          teams in understanding ML system behavior, reliability constraints, and 
-          deployment considerations; emphasized communication of uncertainty and limitations</li>
-        </ul>
-        
-        <p>
-          I believe effective mentorship involves helping others build intuition about 
-          <em>why</em> methods work, not just <em>how</em> to apply them. This approach 
-          reflects my broader interest in understanding systems at a foundational level.
-        </p>
-      </div>
-    </section>
-
-    <!-- TALKS & PRESENTATIONS (NEW SECTION) -->
-    <section id="talks">
-      <div class="section-card">
-        <h2>Talks & Presentations</h2>
-        
-        <p>
-          I am interested in speaking about representation learning, data-centric ML, 
-          diagnostic methods for robustness, and the intersection of machine learning with 
-          organizational decision systems.
-        </p>
-        
-        <h3>Topics of Interest</h3>
-        <ul>
-          <li>Representation geometry and embedding stability in machine learning systems</li>
-          <li>Diagnostic methods beyond aggregate performance metrics</li>
-          <li>Data-centric approaches to ML robustness and evaluation</li>
-          <li>Understanding model behavior under distribution shift and class imbalance</li>
-          <li>Machine learning in organizational contexts: decision systems and governance</li>
-        </ul>
-        
-        <p>
-          If you are organizing a technical meetup, seminar, or workshop and believe 
-          these topics would interest your audience, please reach out. I welcome opportunities 
-          to share ideas and learn from others working on related problems.
-        </p>
-        
-        <p><a href="mailto:e.gulusan@gmail.com">Contact me</a> to discuss potential 
-        speaking engagements.</p>
-      </div>
-    </section>
-
-    <!-- TOOLS & TECHNOLOGIES (NEW SECTION) -->
-    <section id="tools">
-      <div class="section-card">
-        <h2>Tools & Technologies</h2>
-        
-        <p>Technical stack and methodologies I work with regularly:</p>
-        
-        <div class="two-column">
-          <div>
-            <h3>Languages & Core Libraries</h3>
-            <ul>
-              <li><strong>Python</strong> — NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, Seaborn</li>
-              <li><strong>SQL</strong> — T-SQL, Spark SQL, data pipeline development</li>
-            </ul>
-            
-            <h3>Machine Learning Frameworks</h3>
-            <ul>
-              <li><strong>Deep Learning</strong> — PyTorch, TensorFlow, Keras</li>
-              <li><strong>NLP</strong> — Hugging Face Transformers, tokenization, fine-tuning</li>
-              <li><strong>Specialized</strong> — Surprise (collaborative filtering), PySpark (distributed computing)</li>
-            </ul>
-            
-            <h3>Cloud & MLOps</h3>
-            <ul>
-              <li><strong>Cloud Platforms</strong> — AWS SageMaker, Azure ML</li>
-              <li><strong>Development</strong> — Git, CI/CD pipelines, REST APIs</li>
-              <li><strong>Experimentation</strong> — Jupyter Notebooks, Google Colab</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3>Methods & Techniques</h3>
-            <ul>
-              <li><strong>Dimensionality Reduction</strong> — PCA, SVD, t-SNE</li>
-              <li><strong>Evaluation</strong> — ROC-AUC, precision-recall, F1, confusion matrices</li>
-              <li><strong>Diagnostics</strong> — Error analysis, representation geometry, class imbalance handling</li>
-              <li><strong>Statistical Methods</strong> — Hypothesis testing, regression, clustering</li>
-            </ul>
-            
-            <h3>Visualization & Reporting</h3>
-            <ul>
-              <li><strong>Python Visualization</strong> — Matplotlib, Seaborn, PCA/t-SNE projections</li>
-              <li><strong>Business Intelligence</strong> — Tableau, Power BI (in applied contexts)</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1026,7 +957,6 @@
           perspective.
         </p>
 
-        <!-- Books photo: file must be named books.jpg -->
         <div class="reading-image">
           <img src="books.jpg" alt="Books on AI, systems, data science, and algorithms" />
         </div>
@@ -1112,19 +1042,28 @@
       </div>
     </section>
 
-    <!-- CV -->
-    <section id="cv">
+    <!-- TECHNICAL STACK (Compact) -->
+    <section id="tech-stack">
       <div class="section-card">
-        <h2>CV</h2>
-        <p>
-          You can download my current CV here. The document summarizes my technical
-          work, education, and experience with machine learning, analytics, and
-          decision systems.
-        </p>
-        <div class="hero-buttons">
-          <!-- Put your actual PDF files with these names in the same folder, or change the hrefs -->
-          <a href="GulusanErdogan-Ozgul_CV.pdf" class="btn btn-primary">Download CV (PDF)</a>
-          <a href="GulusanErdogan-Ozgul_OnePage.pdf" class="btn">Download 1-Page Overview</a>
+        <h2>Technical Stack</h2>
+        <p class="section-subtitle">Languages, frameworks, and tools I work with regularly</p>
+        
+        <div class="tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">PyTorch</span>
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">Hugging Face</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">SQL</span>
+          <span class="tech-badge">PySpark</span>
+          <span class="tech-badge">AWS SageMaker</span>
+          <span class="tech-badge">Azure ML</span>
+          <span class="tech-badge">Git</span>
+          <span class="tech-badge">Jupyter</span>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Seaborn</span>
         </div>
       </div>
     </section>
