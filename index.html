@@ -578,95 +578,166 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-      <div class="section-card">
-        <h2>Selected Projects</h2>
-        <p class="section-subtitle">
-          Projects illustrating representation analysis, evaluation, and applied ML under realistic conditions.
-        </p>
+      <!-- PROJECTS -->
+<section id="projects">
+  <div class="section-card">
+    <h2>Selected Projects</h2>
+    <p class="section-subtitle">
+      Research-oriented projects examining representation behavior, robustness,
+      and evaluation under realistic data and system constraints.
+    </p>
 
-        <div class="two-column">
-          <div>
-            <h3>Representation &amp; Modeling</h3>
-            <ul class="project-list">
-              <li class="project-item">
-                <div class="project-title">SVD-Based Recommendation Systems <span class="project-date">(2024–present)</span></div>
-                <div class="project-meta">Python • Surprise • SVD • Collaborative Filtering</div>
-                <p>
-                  Analyzing how sparsity and long-tail distributions distort embedding geometry in matrix factorization models,
-                  where rare users/items exhibit unstable latent representations under small perturbations.
-                </p>
-                <a href="https://github.com/gulusan2021/representation-geometry-svd" target="_blank" rel="noopener" class="project-link">
-                  View on GitHub →
-                </a>
-              </li>
+    <div class="two-column">
+      <!-- LEFT COLUMN -->
+      <div>
+        <h3>Representation & Model Behavior</h3>
+        <ul class="project-list">
 
-              <li class="project-item">
-                <div class="project-title">CNN vs. ANN for Digit Recognition <span class="project-date">(2024)</span></div>
-                <div class="project-meta">TensorFlow • CNN • ANN • MNIST</div>
-                <p>
-                  Comparing architectures under different training regimes and analyzing how inductive bias shapes learned feature geometry.
-                </p>
-                <a href="https://github.com/gulusan2021/cnn-vs-ann-representation" target="_blank" rel="noopener" class="project-link">
-                  View on GitHub →
-                </a>
-              </li>
+          <li class="project-item">
+            <div class="project-title">
+              Representation Geometry in SVD-Based Recommendation Systems
+              <span class="project-date">(2024–present)</span>
+            </div>
+            <div class="project-meta">
+              Python • SVD • Collaborative Filtering • Representation Analysis
+            </div>
+            <p>
+              Analyzes how data sparsity and long-tail user–item distributions distort
+              embedding geometry in SVD-based collaborative filtering models. Examines
+              instability of latent representations for rare users and items, highlighting
+              how small perturbations in sparse regimes lead to large representational
+              shifts that are not captured by aggregate accuracy metrics.
+            </p>
+            <a href="https://github.com/gulusan2021/representation-geometry-svd"
+               target="_blank" rel="noopener" class="project-link">
+              View on GitHub →
+            </a>
+          </li>
 
-              <li class="project-item">
-                <div class="project-title">Dimensionality Reduction &amp; Latent Structure <span class="project-date">(2024)</span></div>
-                <div class="project-meta">PCA • t-SNE • clustering • visualization</div>
-                <p>
-                  Using PCA/t-SNE to study eigenstructure, variance explained, and cluster separation—and when DR hides structure.
-                </p>
-                <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne" target="_blank" rel="noopener" class="project-link">
-                  View on GitHub →
-                </a>
-              </li>
-            </ul>
-          </div>
+          <li class="project-item">
+            <div class="project-title">
+              CNN vs. ANN: Representation Behavior in Image Classification
+              <span class="project-date">(2024)</span>
+            </div>
+            <div class="project-meta">
+              TensorFlow • CNN • ANN • Inductive Bias
+            </div>
+            <p>
+              Compares convolutional and fully connected neural networks on image
+              classification tasks, focusing on differences in learned representations
+              and generalization behavior. Investigates how architectural inductive
+              biases shape feature geometry, robustness, and performance under
+              varying training conditions.
+            </p>
+            <a href="https://github.com/gulusan2021/cnn-vs-ann-representation"
+               target="_blank" rel="noopener" class="project-link">
+              View on GitHub →
+            </a>
+          </li>
 
-          <div>
-            <h3>NLP, Imbalance &amp; Pipelines</h3>
-            <ul class="project-list">
-              <li class="project-item">
-                <div class="project-title">Transformer Sentiment + Error Analysis <span class="project-date">(2024–present)</span></div>
-                <div class="project-meta">Hugging Face • NLP • Error analysis</div>
-                <p>
-                  Studying failure patterns under ambiguity and domain shift, linking representation behavior to errors beyond accuracy/F1.
-                </p>
-                <a href="https://github.com/gulusan2021/transformer-error-analysis" target="_blank" rel="noopener" class="project-link">
-                  View on GitHub →
-                </a>
-              </li>
+          <li class="project-item">
+            <div class="project-title">
+              Latent Structure Analysis with PCA and t-SNE
+              <span class="project-date">(2024)</span>
+            </div>
+            <div class="project-meta">
+              PCA • t-SNE • Clustering • Diagnostic Analysis
+            </div>
+            <p>
+              Explores latent structure in high-dimensional datasets using PCA and
+              t-SNE, combined with clustering diagnostics and variance analysis.
+              Examines when dimensionality reduction reveals meaningful structure
+              versus when it obscures relationships, emphasizing interpretability
+              and diagnostic use rather than visualization alone.
+            </p>
+            <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne"
+               target="_blank" rel="noopener" class="project-link">
+              View on GitHub →
+            </a>
+          </li>
 
-              <li class="project-item">
-                <div class="project-title">Predictive Modeling Under Class Imbalance <span class="project-date">(2024–present)</span></div>
-                <div class="project-meta">Python • imbalanced learning • PR curves</div>
-                <p>
-                  Building models for rare-event prediction and developing diagnostics that reveal minority-class failures hidden by aggregate metrics.
-                </p>
-                <a href="https://github.com/gulusan2021/class-imbalance-diagnostics" target="_blank" rel="noopener" class="project-link">
-                  View on GitHub →
-                </a>
-              </li>
-
-              <li class="project-item">
-                <div class="project-title">End-to-End Workflows in Azure ML <span class="project-date">(2023)</span></div>
-                <div class="project-meta">Azure ML • experiment tracking • reproducibility</div>
-                <p>
-                  Deployed ML workflows with reproducible experiments, configuration management, and integration into existing analytics environments.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="project-note" style="margin-top:12px;">
-          <em>Several projects are actively in development. Visit my
-          <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub profile</a>
-          for code and ongoing updates.</em>
-        </p>
+        </ul>
       </div>
-    </section>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <h3>Evaluation, NLP & System Diagnostics</h3>
+        <ul class="project-list">
+
+          <li class="project-item">
+            <div class="project-title">
+              Transformer Error Analysis Under Distribution Shift
+              <span class="project-date">(2024–present)</span>
+            </div>
+            <div class="project-meta">
+              Hugging Face • NLP • Error Analysis • Distribution Shift
+            </div>
+            <p>
+              Conducts systematic error analysis of transformer-based sentiment
+              classifiers under linguistic ambiguity and distribution shift. Links
+              model failures to representational uncertainty, highlighting how
+              confident predictions can mask systematic errors that standard
+              evaluation metrics fail to surface.
+            </p>
+            <a href="https://github.com/gulusan2021/transformer-error-analysis"
+               target="_blank" rel="noopener" class="project-link">
+              View on GitHub →
+            </a>
+          </li>
+
+          <li class="project-item">
+            <div class="project-title">
+              Diagnostics for Class Imbalance in Predictive Models
+              <span class="project-date">(2024–present)</span>
+            </div>
+            <div class="project-meta">
+              Imbalanced Data • ROC • Precision–Recall • Threshold Analysis
+            </div>
+            <p>
+              Develops diagnostic frameworks for predictive modeling under severe
+              class imbalance using ROC curves, precision–recall analysis, and
+              threshold tuning. Demonstrates how aggregate accuracy can obscure
+              minority-class failures and proposes evaluation strategies that
+              better reflect operational risk.
+            </p>
+            <a href="https://github.com/gulusan2021/class-imbalance-diagnostics"
+               target="_blank" rel="noopener" class="project-link">
+              View on GitHub →
+            </a>
+          </li>
+
+          <li class="project-item">
+            <div class="project-title">
+              Academic Portfolio & Research Website Infrastructure
+              <span class="project-date">(ongoing)</span>
+            </div>
+            <div class="project-meta">
+              HTML • CSS • Research Communication
+            </div>
+            <p>
+              Academic-style personal website designed to present research interests,
+              projects, and technical writing in applied machine learning and decision
+              systems. Emphasizes clarity, structure, and coherence across projects
+              rather than résumé-style listing.
+            </p>
+            <a href="https://github.com/gulusan2021/gulusan-website"
+               target="_blank" rel="noopener" class="project-link">
+              View on GitHub →
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <p class="project-note" style="margin-top:12px;">
+      <em>
+        These projects form a coherent research portfolio focused on representation
+        behavior, robustness, and evaluation in deployed machine learning systems.
+      </em>
+    </p>
+  </div>
+</section>
 
     <!-- WRITING -->
     <section id="publications">
@@ -840,3 +911,4 @@
 </script>
 </body>
 </html>
+
