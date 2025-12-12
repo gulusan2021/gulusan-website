@@ -91,15 +91,15 @@
     }
 
     .brand-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 6px;         /* square small version */
-  object-fit: cover;
-  object-position: center 25%;
-  border: 1px solid #e5e7eb;
-  background: #f8fafc;
-  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.12);
-}
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;         /* square small version */
+      object-fit: cover;
+      object-position: center 25%;
+      border: 1px solid #e5e7eb;
+      background: #f8fafc;
+      box-shadow: 0 3px 8px rgba(15, 23, 42, 0.12);
+    }
 
     .brand-text {
       display: flex;
@@ -400,6 +400,24 @@
       font-style: italic;
     }
 
+    .project-date {
+      font-size: 11px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
     /* READING */
 
     .reading-grid {
@@ -476,6 +494,14 @@
       text-align: center;
     }
 
+    /* NEW: Status labels for in-development work */
+    .status {
+      font-size: 11px;
+      color: #888;
+      font-style: italic;
+      margin-left: 4px;
+    }
+
     /* RESPONSIVE */
 
     @media (max-width: 780px) {
@@ -515,9 +541,14 @@
     </div>
     <nav class="nav-links">
       <a href="#about">About</a>
+      <a href="#current-work">Current Work</a>
       <a href="#research">Interests</a>
       <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
       <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Talks</a>
+      <a href="#tools">Tools</a>
       <a href="#reading">Reading</a>
       <a href="#cv" class="pill-primary">CV</a>
       <a href="#contact">Contact</a>
@@ -573,7 +604,7 @@
           reduction (PCA, t-SNE), and quantitative segmentation.
         </p>
         <p>
-          I originally trained in business and management and hold an MBA. My master’s
+          I originally trained in business and management and hold an MBA. My master's
           research examined structural barriers to career advancement for women managers
           through survey-based empirical analysis. That work introduced me to
           system-level thinking, feedback loops, and how metrics and structures
@@ -601,7 +632,7 @@
                 Concentrations in Quantitative Methods, Investments, and Corporate Finance.
               </li>
               <li>
-                <strong>Master’s, Business Administration, Marmara University</strong><br />
+                <strong>Master's, Business Administration, Marmara University</strong><br />
                 Empirical thesis on obstacles to career advancement for women managers in the textile sector.
               </li>
               <li>
@@ -620,6 +651,29 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CURRENT WORK -->
+    <section id="current-work">
+      <div class="section-card">
+        <h2>Current Work</h2>
+        <p class="section-subtitle">Updated December 2024</p>
+        
+        <ul>
+          <li>Analyzing embedding stability in SVD-based collaborative filtering systems</li>
+          <li>Investigating transformer error patterns under distribution shift and ambiguity</li>
+          <li>Developing diagnostic methods for class imbalance in predictive models</li>
+          <li>Preparing PhD applications in Computer Science for Fall 2025 admission</li>
+          <li>Building technical portfolio examining representation geometry and robustness</li>
+        </ul>
+        
+        <p>
+          My current work focuses on understanding how learned representations behave 
+          under realistic data conditions—sparsity, imbalance, and distributional variation—and 
+          developing diagnostic methods that surface instabilities not visible through 
+          aggregate performance metrics.
+        </p>
       </div>
     </section>
 
@@ -668,7 +722,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (ENHANCED with GitHub links and dates) -->
     <section id="projects">
       <div class="section-card">
         <h2>Selected Projects</h2>
@@ -682,35 +736,42 @@
             <h3>Representation & Modeling</h3>
             <ul class="project-list">
               <li class="project-item">
-                <div class="project-title">SVD-Based Recommendation Systems</div>
+                <div class="project-title">SVD-Based Recommendation Systems <span class="project-date">(2024-Present)</span></div>
                 <div class="project-meta">Python • Surprise Library • SVD • Collaborative Filtering</div>
                 <p>
                   Implemented SVD-based collaborative filtering and rank-based recommenders
-                  on user–item interaction data. Handled sparsity, tuned hyperparameters,
-                  and evaluated performance using precision@k, recall@k, and RMSE.
+                  on user–item interaction data. Analyzing how data sparsity and long-tail 
+                  distributions distort embedding geometry in matrix factorization models, where 
+                  rare users and items exhibit unstable latent representations under small 
+                  perturbations. Helped build intuition about how different representations and 
+                  data regimes influence model behavior and reliability.
                 </p>
-                <div class="project-note">
-                  Helped build intuition about how different representations and data
-                  regimes influence model behavior.
-                </div>
+                <a href="https://github.com/gulusan2021/representation-geometry-svd" 
+                   target="_blank" class="project-link">View on GitHub →</a>
               </li>
               <li class="project-item">
-                <div class="project-title">CNN vs. ANN for Digit Recognition</div>
+                <div class="project-title">CNN vs. ANN for Digit Recognition <span class="project-date">(2024)</span></div>
                 <div class="project-meta">TensorFlow • CNN • ANN • MNIST</div>
                 <p>
                   Built and compared convolutional and fully connected networks for
                   digit classification, analyzing generalization and robustness under
-                  different training regimes and architecture depths.
+                  different training regimes and architecture depths. Examining how 
+                  architectural inductive biases shape learned feature geometry.
                 </p>
+                <a href="https://github.com/gulusan2021/cnn-vs-ann-representation" 
+                   target="_blank" class="project-link">View on GitHub →</a>
               </li>
               <li class="project-item">
-                <div class="project-title">Dimensionality Reduction & Latent Structure</div>
+                <div class="project-title">Dimensionality Reduction & Latent Structure <span class="project-date">(2024)</span></div>
                 <div class="project-meta">PCA • t-SNE • clustering • visualization</div>
                 <p>
                   Applied PCA and t-SNE to high-dimensional data, interpreting eigenstructure,
                   variance explained, and cluster separation via silhouette scores and
-                  visual inspection.
+                  visual inspection. Exploring how dimensionality reduction reveals or 
+                  obscures underlying data structure.
                 </p>
+                <a href="https://github.com/gulusan2021/latent-structure-analysis-pca-tsne" 
+                   target="_blank" class="project-link">View on GitHub →</a>
               </li>
             </ul>
           </div>
@@ -719,25 +780,34 @@
             <h3>NLP, Imbalanced Data & Pipelines</h3>
             <ul class="project-list">
               <li class="project-item">
-                <div class="project-title">Sentiment Analysis with Transformer Models</div>
-                <div class="project-meta">Hugging Face Transformers • NLP • Sentiment</div>
+                <div class="project-title">Sentiment Analysis with Transformer Models <span class="project-date">(2024-Present)</span></div>
+                <div class="project-meta">Hugging Face Transformers • NLP • Sentiment • Error Analysis</div>
                 <p>
                   Built sentiment classifiers on customer text using transformer-based
-                  models. Focused on preprocessing, fine-tuning, and evaluation using
-                  accuracy, F1, and confusion matrices with targeted error analysis.
+                  models. Conducting systematic error analysis to examine how representation 
+                  behavior correlates with model failures under ambiguity and domain shift. 
+                  Focused on preprocessing, fine-tuning, and evaluation using accuracy, F1, 
+                  and confusion matrices with targeted error analysis.
                 </p>
+                <a href="https://github.com/gulusan2021/transformer-error-analysis" 
+                   target="_blank" class="project-link">View on GitHub →</a>
               </li>
               <li class="project-item">
-                <div class="project-title">Predictive Modeling Under Class Imbalance</div>
+                <div class="project-title">Predictive Modeling Under Class Imbalance <span class="project-date">(2024-Present)</span></div>
                 <div class="project-meta">Python • Imbalanced data • ROC-AUC • F1</div>
                 <p>
                   Developed models for imbalanced prediction problems (e.g., approval risk,
                   cancellation risk) using resampling strategies and threshold tuning.
-                  Evaluated performance via ROC-AUC, precision–recall, and F1 scores.
+                  Developing diagnostic frameworks that go beyond aggregate accuracy to 
+                  surface performance degradation in minority classes. Evaluated performance 
+                  via ROC-AUC, precision–recall, and F1 scores across different class 
+                  distributions.
                 </p>
+                <a href="https://github.com/gulusan2021/class-imbalance-diagnostics" 
+                   target="_blank" class="project-link">View on GitHub →</a>
               </li>
               <li class="project-item">
-                <div class="project-title">End-to-End Workflows in Azure ML</div>
+                <div class="project-title">End-to-End Workflows in Azure ML <span class="project-date">(2023)</span></div>
                 <div class="project-meta">Azure ML • Experiment tracking • MLOps</div>
                 <p>
                   Deployed ML workflows with reproducible experiments, configuration
@@ -747,29 +817,201 @@
             </ul>
           </div>
         </div>
+
+        <p class="project-note" style="margin-top:12px;">
+          <em>Several projects are actively in development. 
+          Visit my <a href="https://github.com/gulusan2021" target="_blank">GitHub profile</a> 
+          for code and ongoing updates.</em>
+        </p>
       </div>
     </section>
 
-    <!-- PUBLICATIONS -->
+    <!-- WRITING & TECHNICAL NOTES (NEW SECTION) -->
+    <section id="writing">
+      <div class="section-card">
+        <h2>Writing & Technical Notes</h2>
+        
+        <p>
+          I am developing a series of technical explorations examining representation 
+          learning, embedding geometry, and diagnostic methods in machine learning systems. 
+          These writings bridge applied experience with research-oriented inquiry.
+        </p>
+        
+        <h3>In Development</h3>
+        <ul>
+          <li><strong>Representation Geometry in Matrix Factorization Models</strong> — 
+          Examining how sparsity patterns distort embedding spaces in SVD-based collaborative filtering</li>
+          
+          <li><strong>Diagnostic Methods for Class Imbalance</strong> — 
+          Beyond aggregate accuracy: representation-level evaluation under severe imbalance</li>
+          
+          <li><strong>Transformer Error Analysis Under Distribution Shift</strong> — 
+          Systematic investigation of failure patterns in fine-tuned sentiment classifiers</li>
+          
+          <li><strong>From Aggregate Metrics to Representation Diagnostics</strong> — 
+          Why standard evaluation masks instabilities in learned representations</li>
+        </ul>
+        
+        <p class="project-note">
+          <em>Technical notes and preliminary findings will be shared 
+          on this site and through my GitHub repositories as work progresses.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS (EXPANDED) -->
     <section id="publications">
       <div class="section-card">
         <h2>Publications & Academic Work</h2>
-        <h3>Master’s Thesis</h3>
+        
+        <h3>Master's Thesis</h3>
         <ul>
           <li>
             <strong>Erdogan-Ozgul, G.</strong> (2002).
             <em>Obstacles to Career Advancement for Women Managers:
               A Social Responsibility Perspective in Business Management
               (A Survey in the Textile Sector).</em><br />
-            Master’s Thesis, Marmara University (in Turkish). Listed in the YÖK National Thesis Center.
+            Master's Thesis, Marmara University (in Turkish). Listed in the YÖK National Thesis Center.
           </li>
         </ul>
         <p>
           This empirical work used survey data, hypothesis testing, correlation analysis,
           and organizational behavior frameworks to examine structural and cultural
-          barriers to women’s advancement. It sparked my long-term interest in systems,
-          metrics, and institutional decision-making.
+          barriers to women's advancement. It sparked my long-term interest in systems,
+          metrics, and institutional decision-making—themes that continue to inform my 
+          approach to machine learning and data systems.
         </p>
+
+        <h3>Technical Writing (In Development)</h3>
+        <ul>
+          <li><strong>Representation Geometry in Matrix Factorization Models</strong> 
+          <span class="status">(draft)</span></li>
+          
+          <li><strong>Diagnostic Methods for Class Imbalance: Beyond Aggregate Accuracy</strong> 
+          <span class="status">(in progress)</span></li>
+          
+          <li><strong>Error Analysis in Fine-Tuned Transformers Under Distribution Shift</strong> 
+          <span class="status">(in progress)</span></li>
+        </ul>
+        
+        <p class="project-note">
+          <em>Preliminary technical findings from ongoing projects. 
+          These represent work-in-progress as I transition toward research-oriented inquiry.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- TEACHING & MENTORSHIP (NEW SECTION) -->
+    <section id="teaching">
+      <div class="section-card">
+        <h2>Teaching & Mentorship</h2>
+        
+        <p>
+          Throughout my career in analytics and data science, I have supported the 
+          development of junior team members and contributed to knowledge-sharing initiatives 
+          within organizations.
+        </p>
+        
+        <h3>Mentorship Experience</h3>
+        <ul>
+          <li><strong>Junior Analyst Mentoring</strong> — Guided analysts on ML modeling, 
+          drift detection, and evaluation frameworks; focused on helping team members 
+          develop systematic approaches to model diagnostics and validation</li>
+          
+          <li><strong>Internal Knowledge Sessions</strong> — Led technical sessions on 
+          bias detection, model validation, and representation-level diagnostics; designed 
+          content to bridge applied practice with conceptual understanding</li>
+          
+          <li><strong>Cross-Functional ML Guidance</strong> — Supported non-technical 
+          teams in understanding ML system behavior, reliability constraints, and 
+          deployment considerations; emphasized communication of uncertainty and limitations</li>
+        </ul>
+        
+        <p>
+          I believe effective mentorship involves helping others build intuition about 
+          <em>why</em> methods work, not just <em>how</em> to apply them. This approach 
+          reflects my broader interest in understanding systems at a foundational level.
+        </p>
+      </div>
+    </section>
+
+    <!-- TALKS & PRESENTATIONS (NEW SECTION) -->
+    <section id="talks">
+      <div class="section-card">
+        <h2>Talks & Presentations</h2>
+        
+        <p>
+          I am interested in speaking about representation learning, data-centric ML, 
+          diagnostic methods for robustness, and the intersection of machine learning with 
+          organizational decision systems.
+        </p>
+        
+        <h3>Topics of Interest</h3>
+        <ul>
+          <li>Representation geometry and embedding stability in machine learning systems</li>
+          <li>Diagnostic methods beyond aggregate performance metrics</li>
+          <li>Data-centric approaches to ML robustness and evaluation</li>
+          <li>Understanding model behavior under distribution shift and class imbalance</li>
+          <li>Machine learning in organizational contexts: decision systems and governance</li>
+        </ul>
+        
+        <p>
+          If you are organizing a technical meetup, seminar, or workshop and believe 
+          these topics would interest your audience, please reach out. I welcome opportunities 
+          to share ideas and learn from others working on related problems.
+        </p>
+        
+        <p><a href="mailto:e.gulusan@gmail.com">Contact me</a> to discuss potential 
+        speaking engagements.</p>
+      </div>
+    </section>
+
+    <!-- TOOLS & TECHNOLOGIES (NEW SECTION) -->
+    <section id="tools">
+      <div class="section-card">
+        <h2>Tools & Technologies</h2>
+        
+        <p>Technical stack and methodologies I work with regularly:</p>
+        
+        <div class="two-column">
+          <div>
+            <h3>Languages & Core Libraries</h3>
+            <ul>
+              <li><strong>Python</strong> — NumPy, Pandas, SciPy, Scikit-learn, Matplotlib, Seaborn</li>
+              <li><strong>SQL</strong> — T-SQL, Spark SQL, data pipeline development</li>
+            </ul>
+            
+            <h3>Machine Learning Frameworks</h3>
+            <ul>
+              <li><strong>Deep Learning</strong> — PyTorch, TensorFlow, Keras</li>
+              <li><strong>NLP</strong> — Hugging Face Transformers, tokenization, fine-tuning</li>
+              <li><strong>Specialized</strong> — Surprise (collaborative filtering), PySpark (distributed computing)</li>
+            </ul>
+            
+            <h3>Cloud & MLOps</h3>
+            <ul>
+              <li><strong>Cloud Platforms</strong> — AWS SageMaker, Azure ML</li>
+              <li><strong>Development</strong> — Git, CI/CD pipelines, REST APIs</li>
+              <li><strong>Experimentation</strong> — Jupyter Notebooks, Google Colab</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3>Methods & Techniques</h3>
+            <ul>
+              <li><strong>Dimensionality Reduction</strong> — PCA, SVD, t-SNE</li>
+              <li><strong>Evaluation</strong> — ROC-AUC, precision-recall, F1, confusion matrices</li>
+              <li><strong>Diagnostics</strong> — Error analysis, representation geometry, class imbalance handling</li>
+              <li><strong>Statistical Methods</strong> — Hypothesis testing, regression, clustering</li>
+            </ul>
+            
+            <h3>Visualization & Reporting</h3>
+            <ul>
+              <li><strong>Python Visualization</strong> — Matplotlib, Seaborn, PCA/t-SNE projections</li>
+              <li><strong>Business Intelligence</strong> — Tableau, Power BI (in applied contexts)</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -779,7 +1021,7 @@
         <h2>Reading & Intellectual Influences</h2>
         <p>
           My reading spans systems thinking, machine learning, AI governance, and the
-          relationships between technology, institutions, and society. I’m especially
+          relationships between technology, institutions, and society. I'm especially
           drawn to books that connect technical ideas with structural and historical
           perspective.
         </p>
@@ -919,5 +1161,3 @@
 </script>
 </body>
 </html>
-
-
