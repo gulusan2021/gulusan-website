@@ -1,178 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems</title>
+  <title>Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- SEO -->
+  <meta name="description" content="Academic-style profile of Gulusan Erdoğan-Ozgul, focusing on machine learning, data, representation learning, and decision systems under real-world constraints." />
+  <meta name="keywords" content="machine learning, data science, decision systems, representation learning, robustness, model evaluation, applied machine learning, academic profile" />
+  <meta name="author" content="Gulusan Erdoğan-Ozgul" />
 
-<style>
-:root{
-  --bg:#ffffff;
-  --card:#ffffff;
-  --accent:#0a4b90;
-  --muted:#4b5563;
-  --border:#e5e7eb;
-  --radius:14px;
-  --max-width:980px;
-}
+  <!-- Open Graph (LinkedIn / social previews) -->
+  <meta property="og:title" content="Gulusan Erdoğan-Ozgul – Machine Learning & Decision Systems" />
+  <meta property="og:description" content="Academic profile focused on machine learning, representation behavior, and decision systems under realistic data and evaluation constraints." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="me.png" />
 
-*{box-sizing:border-box}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-body{
-  margin:0;
-  font-family:Inter,system-ui,sans-serif;
-  background:var(--bg);
-  color:#111827;
-}
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --accent:#0a4b90;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+      --radius:14px;
+      --max-width:980px;
+    }
 
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
+    *{box-sizing:border-box}
 
-.page{
-  max-width:var(--max-width);
-  margin:auto;
-  padding:20px 16px 60px;
-}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      background:var(--bg);
+      color:#111827;
+    }
 
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  background:#fff;
-  border-bottom:1px solid var(--border);
-  z-index:10;
-}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
 
-.nav-inner{
-  max-width:var(--max-width);
-  margin:auto;
-  padding:10px 16px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    .page{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:20px 16px 60px;
+    }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      z-index:10;
+    }
 
-.brand-avatar{
-  width:38px;height:38px;
-  border-radius:6px;
-  object-fit:cover;
-  border:1px solid var(--border);
-}
+    .nav-inner{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:10px 16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+    }
 
-.brand-name{font-weight:600;font-size:14px}
-.brand-tag{font-size:11px;color:var(--muted)}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 220px;
+    }
 
-.nav-links a{
-  margin-left:8px;
-  font-size:13px;
-  color:var(--muted);
-  padding:4px 10px;
-  border-radius:999px;
-}
+    .brand-avatar{
+      width:38px;height:38px;
+      border-radius:6px;
+      object-fit:cover;
+      border:1px solid var(--border);
+    }
 
-.nav-links a.active{
-  background:rgba(10,75,144,.08);
-  color:var(--accent);
-}
+    .brand-name{font-weight:600;font-size:14px;line-height:1.1}
+    .brand-tag{font-size:11px;color:var(--muted)}
 
-/* SECTION CONTROL */
-section[data-page]{display:none}
-section[data-page].active{display:block}
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:6px;
+    }
 
-/* SECTION BANNER */
-.section-banner{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  padding:10px 14px;
-  margin-bottom:14px;
-  border-radius:var(--radius);
-  border:1px solid rgba(10,75,144,.25);
-  background:rgba(10,75,144,.06);
-}
+    .nav-links a{
+      font-size:13px;
+      color:var(--muted);
+      padding:4px 10px;
+      border-radius:999px;
+    }
 
-.section-banner .title{
-  font-size:18px;
-  font-weight:600;
-  color:var(--accent);
-}
+    .nav-links a.active{
+      background:rgba(10,75,144,.08);
+      color:var(--accent);
+    }
 
-.section-banner .hint{
-  font-size:12px;
-  color:var(--muted);
-}
+    /* SECTION VISIBILITY */
+    section[data-page]{display:none}
+    section[data-page].active{display:block}
 
-/* CARDS */
-.section-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:18px;
-}
+    /* SECTION BANNER */
+    .section-banner{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      padding:10px 14px;
+      margin-bottom:14px;
+      border-radius:var(--radius);
+      border:1px solid rgba(10,75,144,.25);
+      background:rgba(10,75,144,.06);
+    }
 
-h1,h2,h3{margin-top:0}
-p{font-size:14px;color:var(--muted);line-height:1.6}
+    .section-banner .title{
+      font-size:18px;
+      font-weight:600;
+      color:var(--accent);
+      margin:0;
+    }
 
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:20px;
-  align-items:center;
-}
+    .section-banner .hint{
+      font-size:12px;
+      color:var(--muted);
+      margin:0;
+      white-space:nowrap;
+    }
 
-.hero-photo{
-  width:120px;height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:1px solid var(--border);
-}
+    /* CARDS */
+    .section-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px;
+    }
 
-.hero-buttons a{
-  display:inline-block;
-  margin-right:10px;
-  margin-top:10px;
-  font-size:13px;
-}
+    h1,h2{margin:0 0 10px}
+    p{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 10px}
 
-/* PROJECTS */
-.project-item{margin-bottom:16px}
-.project-title{font-weight:600}
-.project-meta{font-size:12px;color:var(--muted)}
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:20px;
+      align-items:center;
+    }
 
-footer{
-  margin-top:40px;
-  text-align:center;
-  font-size:11px;
-  color:var(--muted);
-}
-</style>
+    .hero-photo{
+      width:120px;height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:1px solid var(--border);
+      justify-self:end;
+    }
+
+    .hero-buttons a{
+      display:inline-block;
+      margin-right:12px;
+      margin-top:10px;
+      font-size:13px;
+    }
+
+    /* PROJECTS */
+    .project-item{margin-bottom:16px}
+    .project-title{font-weight:600;margin:0 0 3px}
+    .project-meta{font-size:12px;color:var(--muted);margin:0 0 6px}
+
+    footer{
+      margin-top:40px;
+      text-align:center;
+      font-size:11px;
+      color:var(--muted);
+    }
+
+    @media (max-width: 760px){
+      .hero{grid-template-columns:1fr}
+      .hero-photo{justify-self:start}
+      .brand{min-width:auto}
+    }
+  </style>
 </head>
 
 <body>
-
 <header>
   <div class="nav-inner">
     <div class="brand">
-      <img src="me.png" class="brand-avatar" alt="Photo">
+      <img src="me.png" class="brand-avatar" alt="Photo of Gulusan Erdoğan-Ozgul">
       <div>
         <div class="brand-name">Gulusan Erdoğan-Ozgul</div>
         <div class="brand-tag">Machine Learning • Decision Systems</div>
       </div>
     </div>
+
     <nav class="nav-links">
       <a href="#top">Home</a>
       <a href="#about">Background</a>
-      <a href="#research">Interests</a>
+      <a href="#research">Research</a>
       <a href="#projects">Work</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -180,157 +209,165 @@ footer{
 </header>
 
 <div class="page">
-<main>
+  <main>
 
-<!-- HOME -->
-<section id="top" data-page class="active">
-  <div class="section-banner">
-    <div class="title">Home</div>
-    <div class="hint">Overview</div>
-  </div>
-
-  <div class="section-card hero">
-    <div>
-      <h1>Machine Learning, Data, and Decision Systems</h1>
-      <p>
-        I work at the intersection of machine learning, data, and decision systems, studying how modeling choices and learned representations behave under realistic data conditions and evaluation constraints.
-      </p>
-      <div class="hero-buttons">
-        <a href="#research">Research Interests</a>
-        <a href="#projects">Selected Work</a>
-        <a href="#about">Background & Training</a>
+    <!-- HOME -->
+    <section id="top" data-page class="active">
+      <div class="section-banner">
+        <p class="title">Home</p>
+        <p class="hint">Overview</p>
       </div>
-    </div>
-    <img src="me.png" class="hero-photo" alt="Photo">
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" data-page>
-  <div class="section-banner">
-    <div class="title">Background</div>
-    <div class="hint">Training</div>
-  </div>
+      <div class="section-card hero">
+        <div>
+          <h1>Machine Learning, Data, and Decision Systems</h1>
+          <p>
+            I work at the intersection of machine learning, data, and decision systems, studying how modeling choices and learned representations behave under realistic data conditions and evaluation constraints.
+          </p>
+          <div class="hero-buttons">
+            <a href="#research">Research</a>
+            <a href="#projects">Selected Work</a>
+          </div>
+        </div>
+        <img src="me.png" class="hero-photo" alt="Photo of Gulusan Erdoğan-Ozgul">
+      </div>
+    </section>
 
-  <div class="section-card">
-    <p>
-      I have a background in applied machine learning, data science, and quantitative analysis, with training spanning business, statistics, and modern ML methods.
-    </p>
-    <p>
-      I am currently preparing for doctoral study and building a research-oriented portfolio focused on representation behavior, robustness, and evaluation.
-    </p>
-  </div>
-</section>
+    <!-- BACKGROUND -->
+    <section id="about" data-page>
+      <div class="section-banner">
+        <p class="title">Background</p>
+        <p class="hint">Training</p>
+      </div>
 
-<!-- RESEARCH -->
-<section id="research" data-page>
-  <div class="section-banner">
-    <div class="title">Research Interests</div>
-    <div class="hint">Exploratory</div>
-  </div>
+      <div class="section-card">
+        <p>
+          My background spans applied machine learning, data science, and quantitative analysis, with formal training in business, statistics, and modern ML methods.
+        </p>
+        <p>
+          I have completed applied data science training through MIT Professional Education and continue to build a research-oriented portfolio focused on representation behavior, robustness, and evaluation.
+        </p>
+      </div>
+    </section>
 
-  <div class="section-card">
-    <p>
-      My interests include representation learning, robustness under distribution shift, data imbalance, and evaluation practices for machine learning systems deployed in real decision contexts.
-    </p>
-  </div>
-</section>
+    <!-- RESEARCH -->
+    <section id="research" data-page>
+      <div class="section-banner">
+        <p class="title">Research</p>
+        <p class="hint">Interests</p>
+      </div>
 
-<!-- PROJECTS -->
-<section id="projects" data-page>
-  <div class="section-banner">
-    <div class="title">Selected Work</div>
-    <div class="hint">Pinned Projects</div>
-  </div>
+      <div class="section-card">
+        <p>
+          My research interests include representation learning, robustness under distribution shift, data imbalance, and evaluation practices for machine learning systems deployed in real-world decision contexts.
+        </p>
+      </div>
+    </section>
 
-  <div class="section-card">
+    <!-- PROJECTS -->
+    <section id="projects" data-page>
+      <div class="section-banner">
+        <p class="title">Selected Work</p>
+        <p class="hint">Projects</p>
+      </div>
 
-    <div class="project-item">
-      <div class="project-title">representation-geometry-svd</div>
-      <div class="project-meta">SVD • sparsity • embeddings</div>
-      <p>Analyzing how data sparsity and long-tail distributions distort embedding geometry in SVD-based collaborative filtering models.</p>
-    </div>
+      <div class="section-card">
 
-    <div class="project-item">
-      <div class="project-title">cnn-vs-ann-representation</div>
-      <div class="project-meta">CNN • ANN • generalization</div>
-      <p>Comparing representation behavior and generalization of CNN and ANN models on image classification tasks.</p>
-    </div>
+        <div class="project-item">
+          <div class="project-title">representation-geometry-svd</div>
+          <div class="project-meta">SVD • sparsity • embeddings</div>
+          <p>Analyzing how data sparsity and long-tail distributions distort embedding geometry in SVD-based collaborative filtering models.</p>
+        </div>
 
-    <div class="project-item">
-      <div class="project-title">latent-structure-analysis-pca-tsne</div>
-      <div class="project-meta">PCA • t-SNE • clustering</div>
-      <p>Exploring latent structure in high-dimensional data using PCA, t-SNE, and clustering diagnostics.</p>
-    </div>
+        <div class="project-item">
+          <div class="project-title">cnn-vs-ann-representation</div>
+          <div class="project-meta">CNN • ANN • generalization</div>
+          <p>Comparing representation behavior and generalization of CNN and ANN models on image classification tasks.</p>
+        </div>
 
-    <div class="project-item">
-      <div class="project-title">transformer-error-analysis</div>
-      <div class="project-meta">NLP • distribution shift</div>
-      <p>Systematic error analysis of transformer-based sentiment classifiers under ambiguity and distribution shift.</p>
-    </div>
+        <div class="project-item">
+          <div class="project-title">latent-structure-analysis-pca-tsne</div>
+          <div class="project-meta">PCA • t-SNE • clustering</div>
+          <p>Exploring latent structure in high-dimensional data using PCA, t-SNE, and clustering diagnostics.</p>
+        </div>
 
-    <div class="project-item">
-      <div class="project-title">class-imbalance-diagnostics</div>
-      <div class="project-meta">ROC • PR curves • thresholds</div>
-      <p>Diagnostics for predictive models under severe class imbalance using ROC, PR curves, and threshold analysis.</p>
-    </div>
+        <div class="project-item">
+          <div class="project-title">transformer-error-analysis</div>
+          <div class="project-meta">NLP • distribution shift</div>
+          <p>Systematic error analysis of transformer-based sentiment classifiers under ambiguity and distribution shift.</p>
+        </div>
 
-  </div>
-</section>
+        <div class="project-item">
+          <div class="project-title">class-imbalance-diagnostics</div>
+          <div class="project-meta">ROC • PR curves • thresholds</div>
+          <p>Diagnostics for predictive models under severe class imbalance using ROC, PR curves, and threshold analysis.</p>
+        </div>
 
-<!-- CONTACT -->
-<section id="contact" data-page>
-  <div class="section-banner">
-    <div class="title">Contact</div>
-    <div class="hint">Reach out</div>
-  </div>
+      </div>
+    </section>
 
-  <div class="section-card">
-    <p>Email: <a href="mailto:e.gulusan@gmail.com">e.gulusan@gmail.com</a></p>
-    <p>
-      <a href="https://github.com/gulusan2021" target="_blank">GitHub</a> ·
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-    </p>
-  </div>
-</section>
+    <!-- CONTACT -->
+    <section id="contact" data-page>
+      <div class="section-banner">
+        <p class="title">Contact</p>
+        <p class="hint">Links</p>
+      </div>
 
-</main>
+      <div class="section-card">
+        <p>
+          <a href="mailto:e.gulusan@gmail.com">Email</a> ·
+          <a href="https://github.com/gulusan2021" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </section>
 
-<footer>
-  © <span id="year"></span> Gulusan Erdoğan-Ozgul
-</footer>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Gulusan Erdoğan-Ozgul
+  </footer>
 </div>
 
 <script>
-document.getElementById("year").textContent=new Date().getFullYear();
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-const sections=[...document.querySelectorAll("section[data-page]")];
-const links=[...document.querySelectorAll('a[href^="#"]')];
+  const sections = Array.from(document.querySelectorAll("section[data-page]"));
+  const hashLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
+  const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
 
-function show(id){
-  sections.forEach(s=>s.classList.remove("active"));
-  const target=document.getElementById(id)||document.getElementById("top");
-  target.classList.add("active");
+  function setActiveNav(id){
+    navLinks.forEach(a => a.classList.remove("active"));
+    const active = document.querySelector('.nav-links a[href="#' + id + '"]');
+    if (active) active.classList.add("active");
+  }
 
-  document.querySelectorAll(".nav-links a").forEach(a=>a.classList.remove("active"));
-  const nav=document.querySelector('.nav-links a[href="#'+id+'"]');
-  if(nav) nav.classList.add("active");
+  function show(id){
+    const targetId = (id || "top").replace("#", "");
+    sections.forEach(s => s.classList.remove("active"));
 
-  window.scrollTo(0,0);
-}
+    const target = document.getElementById(targetId) || document.getElementById("top");
+    target.classList.add("active");
 
-links.forEach(a=>{
-  a.onclick=e=>{
-    const id=a.getAttribute("href").replace("#","");
-    if(document.getElementById(id)){
-      e.preventDefault();
-      show(id);
-      history.replaceState(null,"","#"+id);
-    }
-  };
-});
+    setActiveNav(target.id);
+    history.replaceState(null, "", "#" + target.id);
+    window.scrollTo(0, 0);
+  }
 
-show(location.hash.replace("#","")||"top");
+  // Intercept internal hash links (nav + buttons)
+  hashLinks.forEach(a => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href").replace("#", "");
+      if (document.getElementById(id)) {
+        e.preventDefault();
+        show(id);
+      }
+    });
+  });
+
+  // Initial load
+  show(location.hash || "top");
 </script>
 
 </body>
