@@ -736,7 +736,7 @@
       </div>
       <div class="section-card">
         <p>
-          I am a machine learning professional with experience in customer behavior modeling, 
+          I am a data scientist with experience in customer behavior modeling, 
           sentiment analysis with transformers, time series forecasting, and dimensionality reduction. 
           My background bridges business analytics and technical ML implementation.
         </p>
@@ -772,34 +772,28 @@
     <section id="current-work">
       <div class="section-banner">
         <h2>Current Work</h2>
-        <div class="subtitle">December 2025</div>
       </div>
       <div class="section-card section-highlight">
-        <h3>Current Questions</h3>
         <p>
-          How do learned representations degrade under data sparsity, class imbalance, and distribution shift? 
-          What internal signals—beyond aggregate metrics—indicate emerging instabilities before models fail?
+          I am currently working on applied machine learning and data science problems in production settings, where my work involves evaluating model performance under data quality issues, class imbalance, and changing data conditions.
         </p>
         
-        <h3 style="margin-top:16px;">Evidence-Backed Work</h3>
+        <p style="margin-top:12px;">Ongoing activities include:</p>
         <ul>
-          <li><strong>SVD collaborative filtering:</strong> Tested perturbation sensitivity of user/item factors under long-tail sparsity; observed 3–5× higher embedding variance for rare users in MovieLens-1M dataset. 
-          <a href="https://github.com/gulusan2021/representation-geometry-svd" target="_blank">(GitHub)</a></li>
+          <li>Developing and maintaining predictive and analytical models used in operational decision workflows, with attention to 
+          data quality, class imbalance, and performance monitoring over time.</li>
           
-          <li><strong>Transformer sentiment analysis:</strong> Conducted error analysis on fine-tuned BERT classifiers; identified systematic failures in ambiguous/sarcastic text where attention patterns fragment across contradictory tokens. 
-          <a href="https://github.com/gulusan2021/transformer-error-analysis" target="_blank">(GitHub)</a></li>
+          <li>Conducting error analysis and diagnostic evaluation of machine learning models (including NLP and recommender systems) 
+          to understand failure modes under distribution shift, sparsity, and ambiguous inputs.</li>
           
-          <li><strong>Class imbalance diagnostics:</strong> Developed per-class F1 tracking framework; found minority class performance degradation masks itself in aggregate accuracy for 10:1+ imbalance ratios. 
-          <a href="https://github.com/gulusan2021/class-imbalance-diagnostics" target="_blank">(GitHub)</a></li>
+          <li>Implementing and analyzing dimensionality reduction and representation methods (e.g., PCA, SVD, t-SNE) to study 
+          latent structure, embedding stability, and sensitivity to data regimes.</li>
           
-          <li><strong>PhD applications:</strong> Applying to Computer Science PhD programs for Fall 2026 admission, focusing on representation learning and data-centric ML.</li>
-        </ul>
-        
-        <h3 style="margin-top:16px;">Artifacts</h3>
-        <ul>
-          <li><a href="https://github.com/gulusan2021/representation-geometry-svd" target="_blank">SVD embedding stability analysis</a> — Jupyter notebooks with perturbation experiments</li>
-          <li><a href="https://github.com/gulusan2021/transformer-error-analysis" target="_blank">Transformer error patterns</a> — Attention visualization + failure case studies</li>
-          <li><a href="https://github.com/gulusan2021/class-imbalance-diagnostics" target="_blank">Imbalance diagnostic framework</a> — Per-class evaluation utilities</li>
+          <li>Supporting and maintaining analytics platforms and data pipelines, ensuring 
+          reproducibility, robustness, and compliance with organizational and infrastructure constraints.</li>
+          
+          <li>Translating modeling results into interpretable analyses for technical and non-technical stakeholders, with an emphasis 
+          on evaluation choices, metrics, and decision impact rather than headline accuracy alone.</li>
         </ul>
       </div>
     </section>
@@ -810,27 +804,40 @@
         <h2>Research Interests</h2>
       </div>
       <div class="section-card">
-        <div class="two-column">
-          <div>
-            <h3>Machine Learning</h3>
-            <div class="chip-row">
-              <span class="chip chip-strong">Representation learning</span>
-              <span class="chip chip-strong">Model diagnostics</span>
-              <span class="chip">Dimensionality reduction</span>
-              <span class="chip">Robustness under shift</span>
-              <span class="chip">Transformer NLP</span>
-            </div>
-          </div>
-          <div>
-            <h3>Systems & Governance</h3>
-            <div class="chip-row">
-              <span class="chip chip-strong">Decision systems</span>
-              <span class="chip">Data quality propagation</span>
-              <span class="chip">Feedback loops</span>
-              <span class="chip">Organizational ML</span>
-            </div>
-          </div>
-        </div>
+        <p style="margin-bottom:16px;color:#4b5563;">
+          I am interested in how learned representations behave under real-world data conditions and 
+          how evaluation choices shape our understanding of model reliability.
+        </p>
+        
+        <ul style="list-style-type:none;padding:0;">
+          <li style="margin-bottom:12px;padding-left:20px;border-left:3px solid var(--accent);">
+            <strong>How do representation instabilities emerge under long-tail data regimes?</strong><br>
+            <span style="font-size:13px;color:#6b7280;">
+            Sparse interaction patterns and minority classes may produce geometrically unstable embeddings that standard metrics fail to detect.
+            </span>
+          </li>
+          
+          <li style="margin-bottom:12px;padding-left:20px;border-left:3px solid var(--accent);">
+            <strong>When do aggregate evaluation metrics mask decision-level risk?</strong><br>
+            <span style="font-size:13px;color:#6b7280;">
+            High overall accuracy can hide systematic failures in rare but critical cases, particularly under class imbalance or distribution shift.
+            </span>
+          </li>
+          
+          <li style="margin-bottom:12px;padding-left:20px;border-left:3px solid var(--accent);">
+            <strong>What internal model signals indicate emerging failures before degradation appears in aggregate metrics?</strong><br>
+            <span style="font-size:13px;color:#6b7280;">
+            Attention fragmentation, embedding variance, and per-class diagnostics may serve as early warning signals.
+            </span>
+          </li>
+          
+          <li style="margin-bottom:12px;padding-left:20px;border-left:3px solid var(--accent);">
+            <strong>How do data quality irregularities propagate through analytical and decision systems?</strong><br>
+            <span style="font-size:13px;color:#6b7280;">
+            Missing values, measurement error, and temporal drift can compound through modeling pipelines in ways that aren't captured by static validation.
+            </span>
+          </li>
+        </ul>
       </div>
     </section>
 
